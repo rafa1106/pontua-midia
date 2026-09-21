@@ -1,0 +1,62 @@
+[
+  {
+    "key": "c1-recorrencia",
+    "titulo": "Carrossel 1 — A conta do cliente que não volta",
+    "tipo": "carrossel",
+    "quando": "A DEFINIR (ex.: 2026-09-23T09:00:00-03:00)",
+    "status": "agendado",
+    "prefixo_arquivos": "c1_recorrencia",
+    "imagens": [
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_01.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_02.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_03.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_04.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_05.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_06.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_07.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c1_recorrencia_08.jpg"}
+    ],
+    "legenda": "Faz essa conta agora, com os números da sua loja.\n\nQuantos clientes você atende por mês? Qual é o seu ticket médio?\n\nAgora multiplica: se só 15% dessas pessoas voltarem UMA vez a mais no mês, quanto entra a mais no caixa?\n\nNo exemplo do carrossel — uma cafeteria com 400 clientes/mês e ticket de R$ 32 — dá R$ 1.920 por mês. R$ 23 mil por ano.\n\nSem contratar ninguém. Sem aumentar preço. Sem gastar R$ 1 a mais em anúncio.\n\nO cliente que já entrou na sua loja e gostou é o mais barato que existe. Só que na maioria dos comércios ele vai embora e ninguém nunca mais fala com ele. Não porque ficou insatisfeito — porque esqueceu.\n\nÉ exatamente esse buraco que um programa de fidelidade digital fecha: o cartão fica no celular do cliente, você enxerga quem está sumindo e consegue chamar de volta antes de perder.\n\nNo pontua.club você monta o seu em menos de 10 minutos, com carimbo, ponto ou cashback. Grátis para começar, sem cartão de crédito e sem seu cliente precisar instalar nenhum aplicativo.\n\nComenta FIDELIDADE aqui embaixo que eu te mando a planilha dessa conta no direct.",
+    "primeiro_comentario": "Link direto na bio → pontua.club\n\n#fidelizacaodeclientes #comerciolocal #gestaodenegocios #cafeteria #pequenoempreendedor"
+  },
+  {
+    "key": "c2-comparativo",
+    "titulo": "Carrossel 2 — Cartão de papel vs. fidelidade digital",
+    "tipo": "carrossel",
+    "quando": "A DEFINIR",
+    "status": "agendado",
+    "prefixo_arquivos": "c2_comparativo",
+    "imagens": [
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_01.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_02.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_03.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_04.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_05.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_06.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_07.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c2_comparativo_08.jpg"}
+    ],
+    "legenda": "\"Todo mundo perde o cartãozinho. Eu já parei de dar.\"\n\nEssa é a frase que a gente mais escuta de dono de cafeteria, barbearia e petshop. E ela tem razão — só que o problema nunca foi a ideia de fidelizar. Foi o papel.\n\nO cartão de papel foi feito para uma coisa só: marcar uma visita. Mas fidelizar exige outras três — lembrar, identificar e chamar de volta. Nenhuma delas cabe num pedaço de papel.\n\nO comparativo está no slide 4. Salva pra decidir com calma.\n\nE sobre a objeção que mais aparece — \"meu cliente é simples, não vai usar isso\": ele já pede Uber, já paga por Pix, já recebe boleto no WhatsApp. O que trava não é o cliente, é pedir pra ele instalar um app. Por isso o pontua.club funciona por link, direto no navegador.\n\nCarimbo, ponto ou cashback — você escolhe o formato. Grátis para começar em pontua.club.\n\nQual é o seu ramo? Comenta aqui embaixo que eu respondo qual formato costuma funcionar melhor.",
+    "primeiro_comentario": "Monta o seu em pontua.club — grátis, sem cartão de crédito.\n\n#programadefidelidade #barbearia #petshop #vendas #empreendedorismo"
+  },
+  {
+    "key": "c3-erros",
+    "titulo": "Carrossel 3 — 5 erros que matam um programa de fidelidade",
+    "tipo": "carrossel",
+    "quando": "A DEFINIR",
+    "status": "agendado",
+    "prefixo_arquivos": "c3_erros",
+    "imagens": [
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_01.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_02.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_03.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_04.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_05.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_06.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_07.jpg"},
+      {"media_type": "IMAGE", "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/c3_erros_08.jpg"}
+    ],
+    "legenda": "Programa de fidelidade não morre por falta de cliente. Morre por erro de desenho.\n\nOs cinco que mais matam:\n\n1. Recompensa longe demais. \"Junte 20 carimbos\" é longe. Ninguém enxerga o fim. Coloque a primeira recompensa entre 4 e 6 visitas — quem chega na primeira vai atrás da segunda.\n\n2. Prêmio sem desejo. Desconto de 5% não move ninguém. Ofereça o produto que a pessoa já quer: o combo, o item mais pedido, o serviço extra.\n\n3. A equipe não oferece. O cartaz está na parede e o atendente não fala nada. Uma frase treinada, dita em toda venda, é a diferença entre 8% e 60% de adesão.\n\n4. Fricção no cadastro. Nome completo, CPF, e-mail, data de nascimento — na fila, com gente esperando. Peça nome e WhatsApp. Só.\n\n5. Criar e abandonar. Fidelidade não é campanha, é rotina. Dez minutos por semana olhando quem parou de vir já muda o resultado.\n\nO checklist completo está no slide 7. Salva antes de montar o seu.\n\nNo pontua.club esses ajustes já vêm no padrão — carimbo, ponto ou cashback, sem seu cliente instalar nada. Grátis para começar.\n\nManda esse post pra quem tem comércio e vive dizendo que o cliente não volta.",
+    "primeiro_comentario": "Checklist salvo? Monta o seu em pontua.club\n\n#fidelizacao #gestaodeclientes #comerciovarejista #marketinglocal #pmes"
+  }
+]
