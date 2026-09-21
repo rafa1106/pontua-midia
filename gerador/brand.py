@@ -31,5 +31,5 @@ FONT_CSS = """
 @font-face{font-family:'Inter';src:url('file://{IDIR}/inter-latin-700-normal.woff2') format('woff2');font-weight:700;font-display:block}
 @font-face{font-family:'Inter';src:url('file://{IDIR}/inter-latin-800-normal.woff2') format('woff2');font-weight:800;font-display:block}
 @font-face{font-family:'Inter';src:url('file://{IDIR}/inter-latin-900-normal.woff2') format('woff2');font-weight:900;font-display:block}
-@font-face{font-family:'Lora';src:url('file://{LORA}') format('truetype');font-weight:400;font-style:italic;font-display:block}
+@font-face{font-family:'Lora';src:url('file://{LORA}') format('{LORA_FMT}');font-weight:400;font-style:italic;font-display:block}
 """

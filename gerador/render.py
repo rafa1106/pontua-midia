@@ -14,11 +14,16 @@ IDIR = os.environ.get("INTER_DIR") or str(
     next((p for p in [ROOT / "node_modules/@fontsource/inter/files",
                       Path.home() / "pontua/node_modules/@fontsource/inter/files"] if p.exists()),
          ROOT / "node_modules/@fontsource/inter/files"))
-LORA = "/usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf"
+LORA = os.environ.get("LORA_FONT") or next(
+    (str(c) for c in [Path("/usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf"),
+                      ROOT / "node_modules/@fontsource/lora/files/lora-latin-400-italic.woff2"]
+     if c.exists()),
+    "/usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf")
 OUT = Path(os.environ.get("ARTES_DIR") or (ROOT / "artes"))
 OUT.mkdir(parents=True, exist_ok=True)
 
-FONTS = FONT_CSS.replace("{IDIR}", IDIR).replace("{LORA}", LORA)
+FONTS = (FONT_CSS.replace("{IDIR}", IDIR).replace("{LORA}", LORA)
+         .replace("{LORA_FMT}", "woff2" if LORA.endswith(".woff2") else "truetype"))
 
 BASE_CSS = f"""
 *{{margin:0;padding:0;box-sizing:border-box}}
@@ -205,7 +210,10 @@ def build(slides, prefix):
     from playwright.sync_api import sync_playwright
     paths = []
     with sync_playwright() as p:
-        b = p.chromium.launch(args=["--font-render-hinting=none", "--force-color-profile=srgb"])
+        exe = os.environ.get("CHROMIUM_PATH") or next(
+            (str(c) for c in [Path("/opt/pw-browsers/chromium")] if c.exists()), None)
+        b = p.chromium.launch(executable_path=exe,
+                              args=["--font-render-hinting=none", "--force-color-profile=srgb"])
         pg = b.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
         for i, html in enumerate(slides, 1):
             f = OUT / f"{prefix}_{i:02d}.html"
