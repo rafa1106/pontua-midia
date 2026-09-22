@@ -19,6 +19,14 @@ LORA = os.environ.get("LORA_FONT") or next(
                       ROOT / "node_modules/@fontsource/lora/files/lora-latin-400-italic.woff2"]
      if c.exists()),
     "/usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf")
+import base64
+def _uri(n): return "data:image/png;base64," + base64.b64encode((HERE / "marca" / n).read_bytes()).decode()
+LOGO_CLARA, LOGO_ESCURA, SIMBOLO = _uri("logo_clara.png"), _uri("logo_escura.png"), _uri("simbolo.png")
+
+def brand_foot(theme):
+    """Assinatura dos slides internos: símbolo + @handle."""
+    return f'<span style="display:flex;align-items:center;gap:14px"><img src="{SIMBOLO}" style="height:44px;width:44px"><span>{HANDLE}</span></span>'
+
 OUT = Path(os.environ.get("ARTES_DIR") or (ROOT / "artes"))
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -81,7 +89,8 @@ def cover(eyebrow, title_html, sub_html, cta="Arraste →", idx=None):
   <div class="grain"></div>
   <div class="glow" style="width:760px;height:760px;background:{BRAND['accent']};opacity:.22;top:-300px;right:-260px"></div>
   <div class="glow" style="width:620px;height:620px;background:{BRAND['primary_lt']};opacity:.35;bottom:-280px;left:-220px"></div>
-  <div class="eyebrow" style="color:{BRAND['accent']};position:relative">{eyebrow}</div>
+  <img src="{LOGO_CLARA}" style="position:relative;height:62px;width:auto;align-self:flex-start">
+  <div class="eyebrow" style="color:{BRAND['accent']};position:relative;margin-top:54px">{eyebrow}</div>
   <div class="spacer"></div>
   <div class="h1" style="position:relative">{title_html}</div>
   <div class="body" style="margin-top:40px;max-width:800px;color:#E4DDFF;position:relative">{sub_html}</div>
@@ -104,7 +113,7 @@ def stat(idx, big, big_color, kicker, body_html, theme="dark"):
   <div class="num" style="color:{big_color}">{big}</div>
   <div class="body" style="margin-top:52px;max-width:830px">{body_html}</div>
   <div class="spacer b"></div>
-  <div class="foot" style="color:{col}"><span>{HANDLE}</span><span>{idx}</span></div>
+  <div class="foot" style="color:{col}">{brand_foot(theme)}<span>{idx}</span></div>
 </div>""")
 
 
@@ -120,7 +129,7 @@ def text(idx, title_html, body_html, theme="dark", eyebrow=""):
   <div class="h2">{title_html}</div>
   <div class="body" style="margin-top:44px;max-width:840px;color:{col}">{body_html}</div>
   <div class="spacer b"></div>
-  <div class="foot" style="color:{col}"><span>{HANDLE}</span><span>{idx}</span></div>
+  <div class="foot" style="color:{col}">{brand_foot(theme)}<span>{idx}</span></div>
 </div>""")
 
 
@@ -143,7 +152,7 @@ def listing(idx, title_html, items, theme="dark", eyebrow="", accent=None):
   <div class="h3">{title_html}</div>
   <div style="margin-top:22px">{rows}</div>
   <div class="spacer"></div>
-  <div class="foot" style="color:{col}"><span>{HANDLE}</span><span>{idx}</span></div>
+  <div class="foot" style="color:{col}">{brand_foot(theme)}<span>{idx}</span></div>
 </div>""")
 
 
@@ -166,7 +175,7 @@ def compare(idx, title_html, left_title, left_items, right_title, right_items, t
     {col_html(right_title, right_items, "#12A45B", "✓", "#EDFBF3", "#BEEFD4")}
   </div>
   <div class="spacer"></div>
-  <div class="foot" style="color:{col}"><span>{HANDLE}</span><span>{idx}</span></div>
+  <div class="foot" style="color:{col}">{brand_foot(theme)}<span>{idx}</span></div>
 </div>""")
 
 
@@ -181,7 +190,7 @@ def quote(idx, quote_html, attrib, theme="dark"):
   <div class="h3 serif" style="margin-top:34px;font-size:60px;line-height:1.22">{quote_html}</div>
   <div class="small" style="margin-top:40px;color:{col}">{attrib}</div>
   <div class="spacer"></div>
-  <div class="foot" style="color:{col}"><span>{HANDLE}</span><span>{idx}</span></div>
+  <div class="foot" style="color:{col}">{brand_foot(theme)}<span>{idx}</span></div>
 </div>""")
 
 
@@ -200,7 +209,7 @@ def cta(idx, title_html, body_html, button, ps=""):
   <div class="small" style="margin-top:30px;color:#C9BEF5;position:relative">{ps}</div>
   <div class="spacer"></div>
   <div class="foot" style="position:relative;color:#fff">
-    <span style="font-weight:800;letter-spacing:-.02em;font-size:30px">{SITE}</span>
+    <img src="{LOGO_CLARA}" style="height:58px;width:auto">
     <span style="opacity:.75">{HANDLE}</span>
   </div>
 </div>""")
