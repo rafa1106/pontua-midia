@@ -51,8 +51,10 @@
     },
     "acai": {
       "arquivo": "fontes/ramos/acai.jpg",
-      "status": "disponivel",
-      "usada_em": [],
+      "status": "usada",
+      "usada_em": [
+        "p1110_acai"
+      ],
       "obs": "Contagem do cartão não bate com 'faltam 2' — não citar números na legenda."
     },
     "unhas": {
