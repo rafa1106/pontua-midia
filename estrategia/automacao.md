@@ -1,22 +1,31 @@
-# Automação do Instagram @pontua.club — como funciona (v3 · 26/10/2026)
+# Automação do Instagram @pontua.club — como funciona (v4 · 26/10/2026)
 
-Tudo roda na nuvem. **Não depende do PC do Rafael** (até 19/10 dependia, e foi por isso que a fila secou depois de 08/10).
+Tudo roda na nuvem. **Não depende do PC do Rafael.**
+
+```
+Rotina do Claude (seg e qui 07:41 SP)          GitHub Action "renderizar fila"          Make "publicar fila"
+ cria o post, renderiza, faz QA ──► Make ──►  pega pendentes, renderiza, commita  ──►  publica ter/qui/sáb 09:00 SP
+ grava status "renderizar"+código    data      com GITHUB_TOKEN, confere as URLs,       (status "agendado")
+                                     store     avisa a ponte → status "agendado"
+```
 
 | Peça | Onde | O que faz |
 |---|---|---|
-| Rotina de conteúdo | Tarefa agendada do Claude "pontua · conteúdo do Instagram", **seg e qui 07:41 (SP)** | Lê a fila, cria os posts que faltam para os **próximos 15 dias**, renderiza, faz o controle de qualidade, publica as artes neste repo e grava os registros na fila. |
-| Hospedagem das artes | Este repo (`artes/`) → `raw.githubusercontent.com` | O Instagram exige URL pública da imagem. |
-| Fila | Make · data store `pontua_fila_instagram` (154610) | 1 registro por post (`status`: agendado → publicado / erro / pausado / removido). |
-| Publicador | Make · cenário 6350969 (a cada 30 min, 08h–19h) | Publica o registro `agendado` com `quando` vencido e marca `publicado` ou `erro`. |
+| Rotina de conteúdo | Tarefa agendada do Claude "pontua · conteúdo do Instagram", **seg e qui 07:41 SP** | Mantém posts para os **próximos 15 dias**: cria, renderiza localmente, faz o QA visual e grava no Make com `status: "renderizar"` e o código do gerador no campo `gerador`. Se a sessão tiver permissão de push (repo anexado à tarefa), publica direto e grava `agendado`. |
+| Ponte | Make · cenário 6780455 "pontua · ponte GitHub" (webhook) | `acao=pendentes` devolve o próximo post a renderizar · `acao=pronto` muda para `agendado` · `acao=falhou` marca `erro_render`. |
+| Renderização/hospedagem | `.github/workflows/renderizar.yml` + `automacao/render_fila.py` (todo dia 06:17 SP e seg/qui 08:37, 10:37, 14:37 SP) | Renderiza com o mesmo código, commita `artes/`, `gerador/` e `fontes/inventario.json`, espera as URLs `raw.githubusercontent.com` responderem 200 e avisa a ponte. Usa o token da própria Action (não expira, sem segredo). |
+| Fila | Make · data store `pontua_fila_instagram` (154610) | `renderizar → agendado → publicado`, ou `erro_render` / `erro` / `pausado` / `removido`. `_rotina_log` = log da última execução da rotina. |
+| Publicador | Make · cenário 6350969 (a cada 30 min, 08h–19h SP) | Publica o `agendado` com `quando` vencido; marca `publicado` ou `erro`. |
 
 ## Calendário
-Ter (ramo) · Qui (educação) · Sáb (produto/"No automático") às **09:00 SP = 12:00Z**. Regras de conteúdo: `estrategia/guia_conteudo.md` (obrigatório).
-Com 15 dias de folga e 2 execuções por semana, a rotina pode falhar até ~4 vezes seguidas sem o feed parar.
+Ter (ramo) · Qui (educação) · Sáb (produto/"No automático") às **09:00 SP = 12:00Z**. Regras de conteúdo: `estrategia/guia_conteudo.md`.
+Com 15 dias de folga, 2 execuções da rotina por semana e 13 tentativas semanais da Action, várias falhas seguidas ainda não param o feed.
 
 ## Arquivos
-- `fontes/ramos/*.jpg`, `fontes/gerais/*.jpg` — artes-base (cenas IA). `fontes/inventario.json` diz o que está disponível, usado ou proibido.
-- `gerador/pMMDD_tema.py` — um gerador por post (layouts de `render2.py`). `legendas/lote-AAAAMMDD.json` — legendas de cada lote.
+- `fontes/` — artes-base (cenas IA) + `inventario.json` (disponível/usada/proibida; a Action marca "usada" quando o gerador cita `fontes/ramos/<x>.jpg`).
+- `gerador/pMMDD_tema.py` — um gerador por post; inclui a variável `LEGENDA`.
+- O webhook da ponte fica no workflow em base64 (o repo é público). Ele só mexe em posts com status `renderizar`; o pior uso indevido possível é liberar um post antes da hora, e o publicador marcaria `erro`, que a rotina reprocessa.
 
 ## O que só o Rafael pode fazer
-- **Renovar a conexão do Instagram no Make a cada ~60 dias** (exigência da Meta). Make → Connections → `pontua-instagram` → Reauthorize. Vence em **20/11/2026**. A rotina avisa por e-mail/push a partir de 15 dias antes.
+- **Renovar a conexão do Instagram no Make a cada ~60 dias** (regra da Meta): make.com → Connections → `pontua-instagram` → Reauthorize. Vence em **20/11/2026**; a rotina avisa por e-mail/push 15 dias antes.
 - Segurar um post: no data store, mude `status` para `pausado` antes das 9h do dia.

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Leia estrategia/automacao.md para o fluxo completo.
 """Ponte sem credenciais entre a rotina do Claude e o GitHub.
 
 A rotina grava cada post novo no data store do Make com status "renderizar" e o código do
