@@ -70,8 +70,9 @@ def processar(key, codigo):
             raise RuntimeError(f"tamanho errado em {os.path.basename(a)}")
     marcar_inventario(key, codigo)
     sh("git", "add", f"gerador/{key}.py", "fontes/inventario.json", *[os.path.relpath(a, ROOT) for a in arts])
-    sh("git", "commit", "-m", f"Artes {key} (renderizadas pela Action a partir da fila do Make)\n\n"
-       "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode != 0:
+        sh("git", "commit", "-m", f"Artes {key} (renderizadas pela Action a partir da fila do Make)\n\n"
+           "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
     for tentativa in range(4):
         try:
             sh("git", "pull", "--rebase", "origin", "main")
@@ -88,9 +89,14 @@ def processar(key, codigo):
         time.sleep(15)
     else:
         raise RuntimeError("as URLs raw não ficaram públicas em 10 min")
-    _, resp = ponte("pronto", key=key)
-    if not resp.startswith("agendado"):
-        raise RuntimeError(f"Make não confirmou (imagens do registro não batem com as geradas?): {resp[:200]}")
+    resp = ""
+    for _ in range(8):  # a CDN do raw pode demorar a enxergar o arquivo novo do lado do Make
+        _, resp = ponte("pronto", key=key)
+        if resp.startswith("agendado"):
+            break
+        time.sleep(45)
+    else:
+        raise RuntimeError(f"Make não confirmou as imagens (quantidade no registro ≠ geradas, ou URL fora do ar): {resp[:120]}")
     print(f"OK {key}: {len(arts)} artes publicadas e agendadas")
 
 
