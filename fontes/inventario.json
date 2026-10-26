@@ -1,0 +1,30 @@
+{
+  "_leia": "Artes-base (cenas IA) para os posts. A rotina automática consulta e ATUALIZA este arquivo: ao agendar um post que usa uma arte, preencha 'usada_em'. Nunca use arte com status 'nao_usar'.",
+  "ramos": {
+    "barbearia":    {"arquivo": "fontes/ramos/barbearia.jpg",    "status": "usada",      "usada_em": ["p0929_barbearia"], "obs": ""},
+    "salao":        {"arquivo": "fontes/ramos/salao.jpg",        "status": "nao_usar",   "usada_em": [], "obs": "Erro na notificação ('Seu próximo escova', 'now' em inglês, texto embaralhado). Salão é feito em carrossel v2 (p1027_salao)."},
+    "petshop":      {"arquivo": "fontes/ramos/petshop.jpg",      "status": "disponivel", "usada_em": [], "obs": "Cartão sem notificação de WhatsApp: sobrepor notif() como em p1103_lavajato.py."},
+    "lavajato":     {"arquivo": "fontes/ramos/lavajato.jpg",     "status": "usada",      "usada_em": ["p1103_lavajato"], "obs": "Cartão sem notificação: p1103 sobrepõe notif() do WhatsApp."},
+    "posto":        {"arquivo": "fontes/ramos/posto.jpg",        "status": "disponivel", "usada_em": [], "obs": "Ramo secundário. Cartão mostra 1 de 5 carimbos mas a notificação diz 'faltam 2' — ok como ilustração, não citar números na legenda."},
+    "hamburgueria": {"arquivo": "fontes/ramos/hamburgueria.jpg", "status": "usada",      "usada_em": ["p1006_hamburgueria"], "obs": ""},
+    "academia":     {"arquivo": "fontes/ramos/academia.jpg",     "status": "disponivel", "usada_em": [], "obs": "Ramo secundário (loja de suplementos/academia). Contagem do cartão não bate com 'faltam 2' — não citar números na legenda."},
+    "acai":         {"arquivo": "fontes/ramos/acai.jpg",         "status": "disponivel", "usada_em": [], "obs": "Contagem do cartão não bate com 'faltam 2' — não citar números na legenda."},
+    "unhas":        {"arquivo": "fontes/ramos/unhas.jpg",        "status": "disponivel", "usada_em": [], "obs": "Cartão com 4 de 5 e notificação 'faltam 2' — não citar números na legenda."}
+  },
+  "gerais": {
+    "cartao-de-papel-ainda":       {"status": "usada", "usada_em": ["p0926_comofunciona"]},
+    "passo1-voce-cria":            {"status": "usada", "usada_em": ["p0926_comofunciona"]},
+    "passo2-cliente-pontua":       {"status": "usada", "usada_em": ["p0926_comofunciona"]},
+    "passo3-recompensa-whatsapp":  {"status": "usada", "usada_em": ["p0926_comofunciona"]},
+    "nao-vai-baixar-app":          {"status": "usada", "usada_em": ["p0926_comofunciona"]},
+    "simples-assim":               {"status": "usada", "usada_em": ["p0926_comofunciona"]},
+    "conquista-com-barulho-perde-em-silencio":   {"status": "usada", "usada_em": ["post manual antes da automação"]},
+    "fidelizacao-que-faz-voltar-apresentadora":  {"status": "usada", "usada_em": ["post manual antes da automação"], "obs": "Tem marca d'água do gerador (canto inf. direito): usar image(..., erase_br=True)."},
+    "nao-parou-de-comprar":        {"status": "usada", "usada_em": ["post manual antes da automação"]},
+    "quem-volta-merece-vantagem":  {"status": "disponivel", "usada_em": [], "obs": "Apresentadora IA — nunca apresentá-la como cliente."},
+    "fidelizacao-que-faz-voltar-notebook": {"status": "disponivel", "usada_em": [], "obs": "Marca d'água no canto inf. direito: usar erase_br=True."}
+  },
+  "descartadas": {
+    "Gemini_Generated_Image_risyhx (não importada)": "PROIBIDA: '2% instalam / 18% abrem / 98% leem' sem fonte (guia §6 e §9)."
+  }
+}

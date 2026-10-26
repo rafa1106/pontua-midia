@@ -18,5 +18,8 @@ cd gerador && python3 c1.py && python3 c2.py && python3 c3.py
 A saída é determinística: rodar sem mudar `brand.py` reproduz os mesmos JPEGs
 byte a byte. Mudou a paleta em `brand.py` → todo o lote muda junto.
 
+Como a automação inteira funciona: `estrategia/automacao.md`.
+Artes-base para novos posts: `fontes/` (inventário em `fontes/inventario.json`).
+
 Publicação: cenário "pontua · publicar fila do Instagram" no Make lê o data store
 `pontua_fila_instagram` e publica os posts vencidos. Gerido pelo Claude.

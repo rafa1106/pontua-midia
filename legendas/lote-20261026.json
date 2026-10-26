@@ -1,0 +1,126 @@
+[
+ {
+  "key": "p1027_salao",
+  "titulo": "Ramo: salão de beleza",
+  "tipo": "carrossel",
+  "quando": "2026-10-27T12:00:00.000Z",
+  "status": "agendado",
+  "legenda": "Ela amou a escova. Mas vai voltar quando? 💇‍♀️\n\nNo salão, cliente raramente some por preço — some por falta de lembrete. Com o pontua.club, cada visita vira carimbo no celular e o WhatsApp avisa quando a próxima escova grátis está perto.\n\n👉 Programa de fidelidade grátis pro seu salão: link na bio.\n\n#salaodebeleza #cabeleireira #escova #fidelizacaodeclientes #pequenosnegocios",
+  "imagens": [
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1027_salao_01.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1027_salao_02.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1027_salao_03.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1027_salao_04.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1027_salao_05.jpg"
+   }
+  ]
+ },
+ {
+  "key": "p1029_base",
+  "titulo": "Cliente que você já tem: base própria × aplicativo",
+  "tipo": "carrossel",
+  "quando": "2026-10-29T12:00:00.000Z",
+  "status": "agendado",
+  "legenda": "O cliente é seu ou do aplicativo? 🤔\n\nQuem vende só por delivery e anúncio paga de novo toda vez que quer falar com o mesmo cliente. Com uma base própria no pontua.club, o recado chega direto no WhatsApp de quem já comprou de você.\n\n👉 Comece a montar a sua grátis: link na bio.\n\n#fidelizacaodeclientes #pequenosnegocios #restaurante #delivery #comerciolocal",
+  "imagens": [
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_01.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_02.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_03.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_04.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_05.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_06.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_07.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1029_base_08.jpg"
+   }
+  ]
+ },
+ {
+  "key": "p1031_aniversario",
+  "titulo": "No automático #2: aniversário",
+  "tipo": "carrossel",
+  "quando": "2026-10-31T12:00:00.000Z",
+  "status": "agendado",
+  "legenda": "Seu cliente faz aniversário. Você vai lembrar? 🎂\n\nNo Automático #2: no pontua.club, o parabéns sai sozinho no WhatsApp, com um mimo e prazo pra usar. Só para quem autorizou receber — chega como carinho, não como spam.\n\n👉 Crie o seu grátis: link na bio.\n\n#fidelizacaodeclientes #padaria #cafeteria #pequenosnegocios #marketingderelacionamento",
+  "imagens": [
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_01.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_02.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_03.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_04.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_05.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_06.jpg"
+   },
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1031_aniversario_07.jpg"
+   }
+  ]
+ },
+ {
+  "key": "p1103_lavajato",
+  "titulo": "Ramo: lava-jato",
+  "tipo": "imagem",
+  "quando": "2026-11-03T12:00:00.000Z",
+  "status": "agendado",
+  "legenda": "Carro limpo hoje. E na próxima lavagem, ele volta pra você? 🚗\n\nCom o pontua.club, cada lavagem vira carimbo no celular e o WhatsApp avisa: \"faltam 2 pra sua lavagem grátis\". Sem app e sem cartão de papel esquecido no porta-luvas.\n\n👉 Programa de fidelidade grátis pro seu lava-jato: link na bio.\n\n#lavajato #esteticaautomotiva #lavagemautomotiva #fidelizacaodeclientes #pequenosnegocios",
+  "imagens": [
+   {
+    "media_type": "IMAGE",
+    "image_url": "https://raw.githubusercontent.com/rafa1106/pontua-midia/main/artes/p1103_lavajato_01.jpg"
+   }
+  ]
+ }
+]
