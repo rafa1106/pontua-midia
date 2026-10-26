@@ -26,6 +26,11 @@ Com 15 dias de folga, 2 execuções da rotina por semana e 13 tentativas semanai
 - `gerador/pMMDD_tema.py` — um gerador por post; inclui a variável `LEGENDA`.
 - O webhook da ponte fica no workflow em base64 (o repo é público). Ele só mexe em posts com status `renderizar`; o pior uso indevido possível é liberar um post antes da hora, e o publicador marcaria `erro`, que a rotina reprocessa.
 
+## Manutenção que já está coberta
+- GitHub desativa workflows agendados de repositórios públicos após 60 dias sem atividade; cada post renderizado é um commit, então isso não acontece enquanto a rotina estiver ativa.
+- O runner está fixo em `ubuntu-24.04` para a renderização não mudar sozinha.
+- Consumo do Make (plano Free, 1.000 operações/mês): publicador ~340/mês (08h–13h) + ponte ~200/mês.
+
 ## O que só o Rafael pode fazer
 - **Renovar a conexão do Instagram no Make a cada ~60 dias** (regra da Meta): make.com → Connections → `pontua-instagram` → Reauthorize. Vence em **20/11/2026**; a rotina avisa por e-mail/push 15 dias antes.
 - Segurar um post: no data store, mude `status` para `pausado` antes das 9h do dia.

@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   renderizar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fixo: evita quebra quando o ubuntu-latest mudar de versão
     timeout-minutes: 40
     env:
       PONTE_B64: "aHR0cHM6Ly9ob29rLnVzMi5tYWtlLmNvbS9qMnNvdHBkNnJoZGVoY2YyeTRmN3hnMmFvZHI2eWhzMQ=="
