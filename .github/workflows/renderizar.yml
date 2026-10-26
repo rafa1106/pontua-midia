@@ -1,0 +1,43 @@
+# Renderiza e publica as artes dos posts que a rotina do Claude deixou na fila do Make
+# (status "renderizar"). Não precisa de segredo: usa o GITHUB_TOKEN da própria Action.
+name: renderizar fila do Instagram
+on:
+  schedule:
+    - cron: "17 9 * * *"       # todo dia 06:17 SP (rede de segurança)
+    - cron: "37 11 * * 1,4"    # seg/qui 08:37 SP — logo depois da rotina das 07:41
+    - cron: "37 13 * * 1,4"    # seg/qui 10:37 SP
+    - cron: "37 17 * * 1,4"    # seg/qui 14:37 SP
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["automacao/**", ".github/workflows/renderizar.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: renderizar
+  cancel-in-progress: false
+jobs:
+  renderizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      PONTE_B64: "aHR0cHM6Ly9ob29rLnVzMi5tYWtlLmNvbS9qMnNvdHBkNnJoZGVoY2YyeTRmN3hnMmFvZHI2eWhzMQ=="
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Dependências
+        run: |
+          npm ci || npm install
+          pip install playwright==1.47.0 pillow
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y fonts-dejavu-core >/dev/null || true
+      - name: Renderizar pendentes
+        run: |
+          git config user.name "Claude (pontua)"
+          git config user.email "noreply@anthropic.com"
+          python automacao/render_fila.py
