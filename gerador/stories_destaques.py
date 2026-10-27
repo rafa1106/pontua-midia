@@ -54,7 +54,8 @@ def st_cta(title, body):
   <img class="z" src="{LOGO_CLARA}" style="height:64px;align-self:flex-start;margin-top:40px">
   <div class="t2 z" style="margin-top:150px">{title}</div>
   <div class="bd z" style="margin-top:36px;font-size:38px">{body}</div>
-  <div class="z" style="margin-top:430px;text-align:center;font-size:34px;font-weight:800;color:{C['amber']}">Toque no link 👇</div>
+  <div class="z" style="margin-top:300px;align-self:center;text-align:center"><span class="pill" style="font-size:34px;padding:26px 44px">Crie o seu grátis · link na bio</span>
+  <div class="sm" style="margin-top:26px;font-size:28px">Toque em <b style="color:#fff">@pontua.club</b> lá em cima ☝️</div></div>
   {mark()}</div>""")
 
 def capa(emoji):
