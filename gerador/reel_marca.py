@@ -103,11 +103,11 @@ window.R=async function(t){{
   $('win').style.opacity=win*(1-wout); $('win').style.transform=`translate(${{(1-win)*900-wout*900}}px,0)`;
   const ln=back((t-(n2a+.7))/.5), lo=cl((t-(n4a-.62))/.25);
   $('lens').style.opacity=cl((t-(n2a+.7))/.15)*(1-lo); $('lens').style.transform=`scale(${{.85+.15*ln}})`;
-  const ll = t<n3a+.2;   // tema (N2) ou logo (N3)
-  $('tema').style.opacity=ll?1:0; $('ltag').style.opacity=ll?0:1;
   const vt=pw([[n2a,3.0],[n2a+1.1,5.0],[n2a+1.25,5.4],[n2a+2.3,7.5],[n2a+2.45,8.2],[n2b,11.6],[n3a,12.4],[n3a+.9,15.0],[n3a+1.0,15.8],[n3b-.2,17.4],[T,17.4]],t);
   setImg($('sw'),`${{FL}}/${{pad(Math.min(NFL,Math.max(1,Math.round(vt*30)+1)))}}.jpg`,ps);
   zoomW($('sw'),.58,.5,1.19);
+  const ll = vt<12.1;   // lupa: prévia do tema (N2) ou logo (N3)
+  $('tema').style.opacity=ll?1:0; $('ltag').style.opacity=ll?0:1;
   setImg($('sl'),$('sw').src,ps);
   const [lx,ly,lz]= ll?[.815,.47,2.32]:[.30,.425,3.0];
   const LHc = ll?LH:330; $('lens').style.height=LHc+'px';
