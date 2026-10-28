@@ -15,6 +15,17 @@ TAIL = 1.6   # segura o CTA no fim
 
 
 def marcas(work):
+    """Tempos das falas. Prefere audio/alinhamento.json (gerado pelo robô de narração, com o início de
+    cada frase: subs 'N1.2' = 2ª frase da fala N1); senão usa audio/marcas.json (medido à mão)."""
+    al = work / "audio" / "alinhamento.json"
+    if al.exists():
+        d = json.loads(al.read_text())
+        segs = {f["id"]: [round(HEAD + f["ini"], 3), round(HEAD + f["fim"], 3)] for f in d["falas"]}
+        subs, cont = {}, {}
+        for fr in d["frases"]:
+            cont[fr["fala"]] = cont.get(fr["fala"], 0) + 1
+            subs[f'{fr["fala"]}.{cont[fr["fala"]]}'] = round(HEAD + fr["ini"], 3)
+        return segs, subs, segs["N6"][1] + TAIL
     m = json.loads((work / "audio" / "marcas.json").read_text())
     segs = {k: [round(HEAD + a, 3), round(HEAD + b, 3)] for k, (a, b) in m["segs"].items()}
     subs = {k: round(HEAD + v, 3) for k, v in m.get("subs", {}).items()}
