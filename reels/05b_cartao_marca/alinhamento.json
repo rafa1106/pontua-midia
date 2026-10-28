@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Seu cartão de fidelidade com a cara do seu negócio.",
+   "ini": 0.0,
+   "fim": 3.4
+  },
+  {
+   "id": "N2",
+   "texto": "Escolha o tema e veja a prévia na hora.",
+   "ini": 3.6,
+   "fim": 6.24
+  },
+  {
+   "id": "N3",
+   "texto": "Coloque o seu logo.",
+   "ini": 6.4,
+   "fim": 7.6
+  },
+  {
+   "id": "N4",
+   "texto": "E dá pra usar uma imagem sua de fundo, e um ícone próprio no carimbo.",
+   "ini": 7.76,
+   "fim": 12.0
+  },
+  {
+   "id": "N5",
+   "texto": "No celular da cliente, o cartão aparece com o novo visual.",
+   "ini": 12.16,
+   "fim": 15.68
+  },
+  {
+   "id": "N6",
+   "texto": "Cartão personalizado: a partir do plano Basic.",
+   "ini": 16.08,
+   "fim": 19.36
+  },
+  {
+   "id": "N7",
+   "texto": "Crie o seu grátis. Link na bio.",
+   "ini": 19.68,
+   "fim": 22.24
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Seu cartão de fidelidade com a cara do seu negócio.",
+   "ini": 0.0,
+   "fim": 3.4
+  },
+  {
+   "fala": "N2",
+   "texto": "Escolha o tema e veja a prévia na hora.",
+   "ini": 3.6,
+   "fim": 6.24
+  },
+  {
+   "fala": "N3",
+   "texto": "Coloque o seu logo.",
+   "ini": 6.4,
+   "fim": 7.6
+  },
+  {
+   "fala": "N4",
+   "texto": "E dá pra usar uma imagem sua de fundo, e um ícone próprio no carimbo.",
+   "ini": 7.76,
+   "fim": 12.0
+  },
+  {
+   "fala": "N5",
+   "texto": "No celular da cliente, o cartão aparece com o novo visual.",
+   "ini": 12.16,
+   "fim": 15.68
+  },
+  {
+   "fala": "N6",
+   "texto": "Cartão personalizado: a partir do plano Basic.",
+   "ini": 16.08,
+   "fim": 19.36
+  },
+  {
+   "fala": "N7",
+   "texto": "Crie o seu grátis.",
+   "ini": 19.68,
+   "fim": 20.96
+  },
+  {
+   "fala": "N7",
+   "texto": "Link na bio.",
+   "ini": 21.2,
+   "fim": 22.24
+  }
+ ]
+}
