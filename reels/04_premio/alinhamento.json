@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Sabe o melhor momento de um programa de fidelidade? Quando o cliente completa o cartão.",
+   "ini": 0.0,
+   "fim": 5.12
+  },
+  {
+   "id": "N2",
+   "texto": "Décimo café: a atendente dá o último carimbo.",
+   "ini": 5.76,
+   "fim": 9.36
+  },
+  {
+   "id": "N3",
+   "texto": "E na hora ele recebe no WhatsApp: cartão completo.",
+   "ini": 9.52,
+   "fim": 13.12
+  },
+  {
+   "id": "N4",
+   "texto": "Quando ele vier buscar o prêmio, é só validar o resgate no balcão.",
+   "ini": 13.44,
+   "fim": 16.88
+  },
+  {
+   "id": "N5",
+   "texto": "O cartão já recomeça sozinho. E ele já tem motivo pra voltar.",
+   "ini": 17.2,
+   "fim": 21.28
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis. Link na bio.",
+   "ini": 21.68,
+   "fim": 24.0
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Sabe o melhor momento de um programa de fidelidade?",
+   "ini": 0.0,
+   "fim": 2.8
+  },
+  {
+   "fala": "N1",
+   "texto": "Quando o cliente completa o cartão.",
+   "ini": 3.2,
+   "fim": 5.12
+  },
+  {
+   "fala": "N2",
+   "texto": "Décimo café: a atendente dá o último carimbo.",
+   "ini": 5.76,
+   "fim": 9.36
+  },
+  {
+   "fala": "N3",
+   "texto": "E na hora ele recebe no WhatsApp: cartão completo.",
+   "ini": 9.52,
+   "fim": 13.12
+  },
+  {
+   "fala": "N4",
+   "texto": "Quando ele vier buscar o prêmio, é só validar o resgate no balcão.",
+   "ini": 13.44,
+   "fim": 16.88
+  },
+  {
+   "fala": "N5",
+   "texto": "O cartão já recomeça sozinho.",
+   "ini": 17.2,
+   "fim": 19.2
+  },
+  {
+   "fala": "N5",
+   "texto": "E ele já tem motivo pra voltar.",
+   "ini": 19.52,
+   "fim": 21.28
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis.",
+   "ini": 21.68,
+   "fim": 22.88
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 23.04,
+   "fim": 24.0
+  }
+ ]
+}
