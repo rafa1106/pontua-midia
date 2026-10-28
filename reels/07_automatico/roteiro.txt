@@ -1,10 +1,10 @@
 Cliente some e você nem percebe? Deixa o pontua avisar por você.
 
-Na aba Notificações, você liga os avisos uma vez.
+Você escolhe por onde avisar: WhatsApp, SMS ou e-mail.
 
-Falta pouco pro prêmio. Cliente sumido há trinta dias. Aniversário.
+E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.
 
-Daí em diante, eles saem sozinhos, no WhatsApp do cliente.
+Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.
 
 Avisos automáticos: a partir do plano Basic.
 
