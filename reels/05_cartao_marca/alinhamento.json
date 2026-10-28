@@ -1,0 +1,84 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Seu cartão de fidelidade pode ter a cara do seu negócio.",
+   "ini": 0.0,
+   "fim": 3.44
+  },
+  {
+   "id": "N2",
+   "texto": "Na aba Aparência, você escolhe o tema e já vê a prévia.",
+   "ini": 3.84,
+   "fim": 7.68
+  },
+  {
+   "id": "N3",
+   "texto": "Depois, é só colocar o seu logo.",
+   "ini": 8.08,
+   "fim": 10.36
+  },
+  {
+   "id": "N4",
+   "texto": "Pronto: no celular da cliente, o cartão já aparece com o novo visual.",
+   "ini": 10.56,
+   "fim": 15.12
+  },
+  {
+   "id": "N5",
+   "texto": "Cartão personalizado: disponível a partir do plano Basic.",
+   "ini": 15.52,
+   "fim": 19.68
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis. Link na bio.",
+   "ini": 19.84,
+   "fim": 22.4
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Seu cartão de fidelidade pode ter a cara do seu negócio.",
+   "ini": 0.0,
+   "fim": 3.44
+  },
+  {
+   "fala": "N2",
+   "texto": "Na aba Aparência, você escolhe o tema e já vê a prévia.",
+   "ini": 3.84,
+   "fim": 7.68
+  },
+  {
+   "fala": "N3",
+   "texto": "Depois, é só colocar o seu logo.",
+   "ini": 8.08,
+   "fim": 10.36
+  },
+  {
+   "fala": "N4",
+   "texto": "Pronto: no celular da cliente, o cartão já aparece com o novo visual.",
+   "ini": 10.56,
+   "fim": 15.12
+  },
+  {
+   "fala": "N5",
+   "texto": "Cartão personalizado: disponível a partir do plano Basic.",
+   "ini": 15.52,
+   "fim": 19.68
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis.",
+   "ini": 19.84,
+   "fim": 21.2
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 21.44,
+   "fim": 22.4
+  }
+ ]
+}
