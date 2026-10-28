@@ -1,0 +1,48 @@
+name: narrar
+# Gera a narração de um Reel (reels/<id>/roteiro.txt) na ElevenLabs e salva no repositório.
+on:
+  workflow_dispatch:
+    inputs:
+      reel:
+        description: "pasta em reels/ (ex.: 04_premio)"
+        required: true
+      voz:
+        description: "voice_id (vazio = Ana Alice)"
+        required: false
+        default: ""
+      modelo:
+        description: "modelo (vazio = eleven_v4)"
+        required: false
+        default: ""
+  push:
+    paths: ["reels/*/roteiro.txt"]
+permissions:
+  contents: write
+concurrency: { group: narrar, cancel-in-progress: false }
+jobs:
+  narrar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Gerar narração
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          REEL: ${{ inputs.reel }}
+          VOZ: ${{ inputs.voz }}
+          MODELO: ${{ inputs.modelo }}
+        run: |
+          set -euo pipefail
+          if [ -n "${REEL:-}" ]; then LISTA="$REEL"; else
+            LISTA=$(git diff --name-only HEAD~1 HEAD -- 'reels/*/roteiro.txt' | cut -d/ -f2 | sort -u); fi
+          for r in $LISTA; do
+            [[ "$r" =~ ^[a-z0-9_]+$ ]] || { echo "pasta inválida: $r"; exit 1; }
+            python3 automacao/narrar.py "$r" "${VOZ:-}" "${MODELO:-}"
+          done
+      - name: Salvar
+        run: |
+          git config user.name "pontua-bot"; git config user.email "bot@pontua.club"
+          git add reels/*/narracao.mp3 reels/*/alinhamento.json
+          git diff --cached --quiet && exit 0
+          git commit -m "narração gerada"
+          for i in 1 2 3 4; do git pull --rebase -q && git push -q && break; sleep 5; done
