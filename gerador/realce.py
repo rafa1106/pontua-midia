@@ -29,3 +29,14 @@ if __name__ == "__main__":
     dst.mkdir(parents=True, exist_ok=True)
     for f in sorted(src.glob("*.jpg")):
         realca(Image.open(f), g).save(dst / f.name, quality=92)
+
+
+def realca_local(im, clip=2.5, g=0.9, tiles=8):
+    """Realce com contraste local (CLAHE na luminância) — para telas com texto de baixo contraste
+    (cards verdes, textos cinza sobre fundo escuro). Cores preservadas (só mexe no canal L)."""
+    import cv2, numpy as np
+    a = np.array(im.convert("RGB"))
+    lab = cv2.cvtColor(a, cv2.COLOR_RGB2LAB)
+    l, A, B = cv2.split(lab)
+    l = cv2.createCLAHE(clipLimit=clip, tileGridSize=(tiles, tiles)).apply(l)
+    return realca(Image.fromarray(cv2.cvtColor(cv2.merge((l, A, B)), cv2.COLOR_LAB2RGB)), g)
