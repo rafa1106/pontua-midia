@@ -25,7 +25,7 @@ def marcas(work):
         for fr in d["frases"]:
             cont[fr["fala"]] = cont.get(fr["fala"], 0) + 1
             subs[f'{fr["fala"]}.{cont[fr["fala"]]}'] = round(HEAD + fr["ini"], 3)
-        return segs, subs, segs["N6"][1] + TAIL
+        return segs, subs, max(b for a, b in segs.values()) + TAIL
     m = json.loads((work / "audio" / "marcas.json").read_text())
     segs = {k: [round(HEAD + a, 3), round(HEAD + b, 3)] for k, (a, b) in m["segs"].items()}
     subs = {k: round(HEAD + v, 3) for k, v in m.get("subs", {}).items()}
