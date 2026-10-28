@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Quem são os seus clientes de verdade? E quem sumiu?",
+   "ini": 0.0,
+   "fim": 3.92
+  },
+  {
+   "id": "N2",
+   "texto": "No pontua, a sua lista de clientes fica num lugar só.",
+   "ini": 4.16,
+   "fim": 7.6
+  },
+  {
+   "id": "N3",
+   "texto": "O painel avisa quem não aparece há mais de trinta dias, e já dá pra chamar de volta.",
+   "ini": 8.0,
+   "fim": 13.32
+  },
+  {
+   "id": "N4",
+   "texto": "Na ficha de cada cliente, você vê campanhas, prêmios e o histórico de visitas.",
+   "ini": 13.52,
+   "fim": 18.92
+  },
+  {
+   "id": "N5",
+   "texto": "É uma base que é sua. Não da rede social.",
+   "ini": 19.12,
+   "fim": 22.16
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis. Link na bio.",
+   "ini": 22.56,
+   "fim": 25.12
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Quem são os seus clientes de verdade?",
+   "ini": 0.0,
+   "fim": 2.28
+  },
+  {
+   "fala": "N1",
+   "texto": "E quem sumiu?",
+   "ini": 2.48,
+   "fim": 3.92
+  },
+  {
+   "fala": "N2",
+   "texto": "No pontua, a sua lista de clientes fica num lugar só.",
+   "ini": 4.16,
+   "fim": 7.6
+  },
+  {
+   "fala": "N3",
+   "texto": "O painel avisa quem não aparece há mais de trinta dias, e já dá pra chamar de volta.",
+   "ini": 8.0,
+   "fim": 13.32
+  },
+  {
+   "fala": "N4",
+   "texto": "Na ficha de cada cliente, você vê campanhas, prêmios e o histórico de visitas.",
+   "ini": 13.52,
+   "fim": 18.92
+  },
+  {
+   "fala": "N5",
+   "texto": "É uma base que é sua.",
+   "ini": 19.12,
+   "fim": 20.64
+  },
+  {
+   "fala": "N5",
+   "texto": "Não da rede social.",
+   "ini": 20.96,
+   "fim": 22.16
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis.",
+   "ini": 22.56,
+   "fim": 23.92
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 24.16,
+   "fim": 25.12
+  }
+ ]
+}
