@@ -115,7 +115,7 @@ window.R=async function(t){{
   $('pill').style.opacity=cl((t-(n2b-.6))/.2); $('pill').style.transform=`translateY(${{(1-ease((t-(n2b-.6))/.3))*20}}px)`;
   $('flash').style.opacity=.85*cl(1-Math.abs(t-(n3a-.15))/.15);
   // tela real: página do clube → formulário → confirmado (N3); confirmado rolando (N4); cartão (N5)
-  const vt=pw([[0,.5],[n3a-.2,.5],[n3a+.4,3.2],[U.pronto||n3b-.6,20.9],[n4a,22.5],[n5a-.2,33],[n5a,37.2],[T,39.6]],t);
+  const vt=pw([[0,.5],[n3a-.2,.5],[n3a+.4,3.2],[U.pronto||n3b-.6,20.9],[n4a,22.5],[n5a-.2,31.4],[n5a-.19,37.0],[n5a,37.2],[T,39.6]],t);
   setImg($('sv'),`${{FC}}/${{pad(Math.min(NFC,Math.max(1,Math.round(vt*30)+1)))}}.jpg`,ps);
   // legendas
   show('c2',t,n2a,n3a); show('c3',t,n3a,n4a-.1); show('c4',t,n4a-.1,n5a); show('c5',t,n5a,n6a-.1);
