@@ -15,8 +15,9 @@ SH = round(SW * 2532 / 1170)
 PT = 470
 WW = 1000
 VH0 = round(WW * 900 / 1440)
-VH = 820
+VH = round(VH0 * 1.19)   # recorte = só tira a barra lateral do painel (nada de conteúdo cortado)
 WT = 540
+LW, LH = 760, 470   # lupa
 
 
 def build(work):
@@ -37,12 +38,12 @@ def build(work):
   <div class="bar"><i></i><i></i><i></i><span class="url">🔒 pontua.club</span></div>
   <div class="vp"><img id="sw" src="{fl}/0001.jpg"></div>
 </div>
-<div id="tema"><span>tema</span><b id="tn">Rose</b></div>
+<div id="lens"><img id="sl" src="{fl}/0001.jpg"><div id="tema"><span>tema</span><b id="tn">Rose</b></div><div id="ltag">logo</div></div>
 
 <div id="phone"><div class="scr"><img id="sa" src="{fc}/0078.jpg"><img id="sd" src="{fc}/0900.jpg"><div id="wipe"></div></div><div id="ring"></div></div>
 <div id="who">antes</div>
 
-<div class="badge" id="logo" style="left:0;right:0;margin:auto;width:max-content;top:1600px">✓ Logo enviado</div>
+<div class="badge" id="logo" style="left:0;right:0;margin:auto;width:max-content;top:1490px">✓ Logo enviado</div>
 <div id="plano"><div class="p1">Disponível a partir do</div><div class="p2">Plano Basic</div><div class="p3">R$ 39/mês</div></div>
 {CTA}"""
     css = f"""
@@ -54,10 +55,14 @@ def build(work):
 #win .url{{margin-left:22px;flex:1;height:36px;border-radius:12px;background:#0F0D1E;color:#B9B2D9;font-size:22px;display:flex;align-items:center;padding-left:18px}}
 #win .vp{{position:relative;width:{WW}px;height:{VH}px;overflow:hidden}}
 #win .vp img{{position:absolute;left:0;top:0;width:{WW}px;height:{VH0}px;transform-origin:0 0}}
-#tema{{position:absolute;left:0;right:0;margin:auto;width:max-content;top:{WT + 58 + VH + 40}px;display:flex;align-items:center;gap:18px;
-  padding:18px 34px;border-radius:999px;background:rgba(255,255,255,.08);border:1.5px solid rgba(183,156,255,.35);opacity:0}}
-#tema span{{font-size:28px;color:{C['muted']};font-weight:600;text-transform:uppercase;letter-spacing:.12em}}
-#tema b{{font-size:48px;font-weight:900;letter-spacing:-.02em}}
+#lens{{position:absolute;left:0;right:0;margin:auto;top:1120px;width:{LW}px;height:{LH}px;border-radius:30px;overflow:hidden;background:#0F1220;opacity:0;
+  border:4px solid {C['amber']};box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(255,194,77,.45);transform-origin:50% 0}}
+#lens img{{position:absolute;left:0;top:0;transform-origin:0 0}}
+#tema,#ltag{{position:absolute;left:22px;top:20px;display:flex;align-items:center;gap:14px;padding:12px 24px;border-radius:999px;
+  background:rgba(13,10,24,.82);border:1.5px solid rgba(183,156,255,.45)}}
+#ltag{{font-size:30px;font-weight:900;color:{C['amber']};text-transform:uppercase;letter-spacing:.12em;opacity:0}}
+#tema span{{font-size:24px;color:{C['muted']};font-weight:600;text-transform:uppercase;letter-spacing:.12em}}
+#tema b{{font-size:40px;font-weight:900;letter-spacing:-.02em}}
 #phone{{position:absolute;left:{(W-PW)//2}px;top:{PT}px;width:{PW}px;height:{SH + 32}px;border-radius:78px;padding:16px;
   background:linear-gradient(145deg,#352B66,#120D26);box-shadow:0 0 0 2px rgba(183,156,255,.5),0 0 110px rgba(123,77,255,.55),0 50px 90px rgba(0,0,0,.6);
   transform-origin:50% 30%}}
@@ -73,7 +78,7 @@ def build(work):
 """
     js = f"""
 const S={json.dumps(S)}, U={json.dumps(U)}, T={total:.3f}, FL="{fl}", FC="{fc}", NFL={nfl}, NFC={nfc};
-const SW={SW}, SH={SH}, VW={WW}, VH={VH}, VH0={VH0};
+const SW={SW}, SH={SH}, VW={WW}, VH={VH}, VH0={VH0}, LW={LW}, LH={LH};
 function zoomP(el,fx,fy,z){{ const tx=cl(SW/2-fx*SW*z,SW-SW*z,0), ty=cl(SH/2-fy*SH*z,SH-SH*z,0); el.style.transform=`translate(${{tx}}px,${{ty}}px) scale(${{z}})`; return ty; }}
 function zoomW(el,fx,fy,z){{ const tx=cl(VW/2-fx*VW*z,VW-VW*z,0), ty=cl(VH/2-fy*VH0*z,VH-VH0*z,0); el.style.transform=`translate(${{tx}}px,${{ty}}px) scale(${{z}})`; }}
 function kf(K,t){{ let i=1; while(i<K.length-1 && t>K[i][0]) i++; const [a,fa]=K[i-1],[b,fb]=K[i];
@@ -96,13 +101,21 @@ window.R=async function(t){{
   // janela do painel (N2–N3)
   const win=ease((t-(n2a-.15))/.5), wout=ease((t-(n4a-.62))/.5);
   $('win').style.opacity=win*(1-wout); $('win').style.transform=`translate(${{(1-win)*900-wout*900}}px,0)`;
-  $('tema').style.opacity=io(t,n2a+.2,n3a+.05)*(1-wout);
-  const vt=pw([[n2a,3.0],[n2a+1.0,5.2],[n2a+2.3,7.6],[n2b,11.6],[n3a,13.0],[n3b-.2,17.4],[T,17.4]],t);
+  const ln=back((t-(n2a+.7))/.5), lo=cl((t-(n4a-.62))/.25);
+  $('lens').style.opacity=cl((t-(n2a+.7))/.15)*(1-lo); $('lens').style.transform=`scale(${{.85+.15*ln}})`;
+  const ll = t<n3a+.2;   // tema (N2) ou logo (N3)
+  $('tema').style.opacity=ll?1:0; $('ltag').style.opacity=ll?0:1;
+  const vt=pw([[n2a,3.0],[n2a+1.1,5.0],[n2a+1.25,5.4],[n2a+2.3,7.5],[n2a+2.45,8.2],[n2b,11.6],[n3a,12.4],[n3a+.9,15.0],[n3a+1.0,15.8],[n3b-.2,17.4],[T,17.4]],t);
   setImg($('sw'),`${{FL}}/${{pad(Math.min(NFL,Math.max(1,Math.round(vt*30)+1)))}}.jpg`,ps);
-  zoomW($('sw'),...kf([[n2a,[.62,.5,1.3]],[n3a-.1,[.62,.5,1.3]],[n3a+.4,[.33,.36,1.75]],[T,[.33,.36,1.75]]],t));
-  $('tn').textContent = vt<5.8?'Rose':(vt<7.9?'Escuro':'Dourado');
-  $('tn').style.color = vt<5.8?'#FF5FA2':(vt<7.9?'#C9C4E6':'#FFC24D');
-  pop('logo',t,n3a+.9,n4a-.6,-2);
+  zoomW($('sw'),.58,.5,1.19);
+  setImg($('sl'),$('sw').src,ps);
+  const [lx,ly,lz]= ll?[.815,.47,2.32]:[.30,.425,3.0];
+  const LHc = ll?LH:330; $('lens').style.height=LHc+'px';
+  const lw=VW*lz, lh=VH0*lz; $('sl').style.width=lw+'px'; $('sl').style.height=lh+'px';
+  $('sl').style.transform=`translate(${{cl(LW/2-lx*lw,LW-lw,0)}}px,${{cl(LHc/2-ly*lh,LHc-lh,0)}}px)`;
+  $('tn').textContent = vt<5.2?'Rose':(vt<7.8?'Escuro':'Dourado');
+  $('tn').style.color = vt<5.2?'#FF5FA2':(vt<7.8?'#C9C4E6':'#FFC24D');
+  pop('logo',t,n3a+1.05,n4a-.6,-2);
   // antes → depois (cortina)
   const wk=ease((t-(n4a+.35))/.9);
   $('sd').style.clipPath=`inset(0 ${{(1-wk)*100}}% 0 0)`;
