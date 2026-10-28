@@ -38,6 +38,14 @@ def dur(path):
 
 
 def timeline(work):
+    """Com audio/narracao.mp3 + audio/marcas.json (tempos medidos no áudio), usa as marcas;
+    senão, usa N1..N6.mp3 ou as durações estimadas."""
+    mj = work / "audio" / "marcas.json"
+    if mj.exists() and (work / "audio" / "narracao.mp3").exists():
+        m = json.loads(mj.read_text())
+        segs = {k: (HEAD + a, HEAD + b) for k, (a, b) in m["segs"].items()}
+        subs = {k: HEAD + v for k, v in m.get("subs", {}).items()}
+        return segs, segs["N6"][1] + TAIL, subs
     t, segs = HEAD, {}
     for nid, _, est in NARR:
         a = work / "audio" / f"{nid}.mp3"
@@ -45,11 +53,14 @@ def timeline(work):
         segs[nid] = (t, t + d)
         t += d + GAP
     total = segs["N6"][1] + TAIL
-    return segs, total
+    a, b = segs["N1"]
+    subs = {"s2": a + 1.1, "s3": a + 2.4, "dado": None, "link": segs["N6"][0] + 1.0}
+    return segs, total, subs
 
 
-def html(work, segs, total):
+def html(work, segs, total, subs):
     S = {k: [round(a, 3), round(b, 3)] for k, (a, b) in segs.items()}
+    U = {k: (round(v, 3) if v is not None else None) for k, v in subs.items()}
     fl, fc = (work / "fl").as_uri(), (work / "fc").as_uri()
     nfl = len(list((work / "fl").glob("*.jpg")))
     nfc = len(list((work / "fc").glob("*.jpg")))
@@ -159,7 +170,7 @@ body{{font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;color:{C
 #cta .hd2{{font-size:36px;font-weight:700;color:{C['muted']}}}
 """
     js = f"""
-const S={json.dumps(S)}, T={total:.3f}, FL="{fl}", FC="{fc}", NFL={nfl}, NFC={nfc};
+const S={json.dumps(S)}, U={json.dumps(U)}, T={total:.3f}, FL="{fl}", FC="{fc}", NFL={nfl}, NFC={nfc};
 const $=id=>document.getElementById(id);
 const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const ease=x=>1-Math.pow(1-cl(x),3);
@@ -172,16 +183,17 @@ for(let i=0;i<14;i++){{const e=document.createElement('i');$('burst').appendChil
 let lastA='',lastB='';
 window.R=async function(t){{
   const [n1a,n1b]=S.N1,[n2a,n2b]=S.N2,[n3a,n3b]=S.N3,[n4a,n4b]=S.N4,[n5a,n5b]=S.N5,[n6a,n6b]=S.N6;
+  const tp=U.dado!=null?U.dado:n3a+(16.2-12.3)/(17.6-12.3)*(n3b-n3a);
   // gancho
-  const h1=ease((t-0.15)/.45), h2=ease((t-1.25)/.45);
+  const h1=ease((t-(n1a-.05))/.45), h2=ease((t-(U.s2-.1))/.45);
   $('h1').style.cssText=`opacity:${{h1}};transform:translateY(${{(1-h1)*40}}px)`;
   $('h2').style.cssText=`opacity:${{h2}};transform:translateY(${{(1-h2)*40}}px)`;
-  const hookOut=cl((t-(n1a+2.55))/.35);
+  const hookOut=cl((t-(U.s3-.35))/.35);
   $('hook').style.opacity=1-hookOut;
   $('hook').style.transform=`translateY(${{-hookOut*60}}px)`;
-  $('hook2').style.opacity=io(t,n1a+2.7,n2a+.15,.35,.25);
+  $('hook2').style.opacity=io(t,U.s3-.05,n2a+.15,.35,.25);
   // celular entra
-  const pe=ease((t-(n1a+2.85))/.6);
+  const pe=ease((t-(U.s3-.1))/.6);
   const ctaK=ease((t-(n6a-.15))/.5);
   $('phone').style.opacity=pe*(1-ctaK);
   const dip=1-.04*cl(1-Math.abs(t-(n4a-.2))/.25);
@@ -192,7 +204,7 @@ window.R=async function(t){{
   let src=FL, fr=1, cli=0;
   if(t<n2a) fr=4.0*30;
   else if(t<n3a) fr=lerp(5.0,12.3,(t-n2a)/(n3a-n2a-.1))*30;
-  else if(t<n4a-.2) fr=lerp(12.3,17.6,(t-n3a)/(n3b-n3a))*30;
+  else if(t<n4a-.2) fr=(t<tp? lerp(12.3,16.15,(t-n3a)/(tp-n3a)) : lerp(16.15,17.6,(t-tp)/.6))*30;
   else {{ fr=17.6*30; }}
   // cliente: 7/10 durante N4, 8/10 a partir de N5
   if(t>=n4a-.3){{ cli=ease((t-(n4a-.3))/.18); }}
@@ -219,7 +231,6 @@ window.R=async function(t){{
   const fb=back((t-tf)/.4);
   $('found').style.cssText=`opacity:${{cl((t-tf)/.15)*(1-cl((t-(n3a+.4))/.3))}};transform:scale(${{fb}}) rotate(-3deg)`;
   // +1 (no vídeo: tela de sucesso ~16.2s)
-  const tp=n3a+(16.2-12.3)/(17.6-12.3)*(n3b-n3a);
   const pb=back((t-tp)/.45);
   const pOut=cl((t-(n4a-.45))/.2);
   $('plus').style.cssText=`opacity:${{cl((t-tp)/.12)*(1-pOut)}};transform:scale(${{pb*(1-pOut*.3)}}) rotate(${{-8+pb*4}}deg)`;
@@ -244,8 +255,8 @@ window.R=async function(t){{
 
 
 def render(work, only=None):
-    segs, total = timeline(work)
-    (work / "reel.html").write_text(html(work, segs, total), encoding="utf-8")
+    segs, total, subs = timeline(work)
+    (work / "reel.html").write_text(html(work, segs, total, subs), encoding="utf-8")
     fdir = work / "frames"
     fdir.mkdir(exist_ok=True)
     for f in fdir.glob("*.jpg"):
@@ -263,13 +274,22 @@ def render(work, only=None):
             pg.evaluate(f"R({i / FPS})")
             pg.screenshot(path=str(fdir / f"{i:05d}.jpg"), type="jpeg", quality=92)
         b.close()
-    return segs, total
+    return segs, total, subs
 
 
 def encode(work, segs, total):
     vid = work / "video_only.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(FPS), "-i", str(work / "frames/%05d.jpg"),
                     "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", str(vid)], check=True)
+    full = work / "audio" / "narracao.mp3"
+    if (work / "audio" / "marcas.json").exists() and full.exists():
+        out = work / "reel_carimbo.mp4"
+        ms = int(HEAD * 1000)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(vid), "-i", str(full), "-filter_complex",
+                        f"[1:a]adelay={ms}|{ms},loudnorm=I=-14:TP=-1.5:LRA=11,apad,atrim=0:{total:.3f}[aout]",
+                        "-map", "0:v", "-map", "[aout]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+                        "-ar", "48000", "-shortest", "-movflags", "+faststart", str(out)], check=True)
+        return out
     auds = [(k, work / "audio" / f"{k}.mp3") for k, *_ in NARR]
     auds = [(k, a) for k, a in auds if a.exists()]
     out = work / "reel_carimbo.mp4"
@@ -298,10 +318,10 @@ def encode(work, segs, total):
 if __name__ == "__main__":
     work = Path(sys.argv[1]).resolve()
     if len(sys.argv) > 2 and sys.argv[2] == "preview":
-        segs, total = timeline(work)
+        segs, total, subs = timeline(work)
         ts = [float(x) for x in sys.argv[3].split(",")]
         render(work, only=[int(x * FPS) for x in ts])
         print(json.dumps({"total": total, "segs": segs}))
     else:
-        segs, total = render(work)
+        segs, total, subs = render(work)
         print(encode(work, segs, total))
