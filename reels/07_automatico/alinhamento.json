@@ -4,37 +4,37 @@
    "id": "N1",
    "texto": "Cliente some e você nem percebe? Deixa o pontua avisar por você.",
    "ini": 0.0,
-   "fim": 4.68
+   "fim": 4.96
   },
   {
    "id": "N2",
-   "texto": "Na aba Notificações, você liga os avisos uma vez.",
-   "ini": 4.88,
-   "fim": 8.64
+   "texto": "Você escolhe por onde avisar: WhatsApp, SMS ou e-mail.",
+   "ini": 5.2,
+   "fim": 9.68
   },
   {
    "id": "N3",
-   "texto": "Falta pouco pro prêmio. Cliente sumido há trinta dias. Aniversário.",
-   "ini": 8.88,
-   "fim": 14.16
+   "texto": "E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.",
+   "ini": 10.08,
+   "fim": 16.76
   },
   {
    "id": "N4",
-   "texto": "Daí em diante, eles saem sozinhos, no WhatsApp do cliente.",
-   "ini": 14.4,
-   "fim": 18.2
+   "texto": "Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.",
+   "ini": 16.96,
+   "fim": 20.96
   },
   {
    "id": "N5",
    "texto": "Avisos automáticos: a partir do plano Basic.",
-   "ini": 18.4,
-   "fim": 21.76
+   "ini": 21.44,
+   "fim": 24.72
   },
   {
    "id": "N6",
    "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 21.92,
-   "fim": 24.4
+   "ini": 25.04,
+   "fim": 27.36
   }
  ],
  "frases": [
@@ -42,61 +42,49 @@
    "fala": "N1",
    "texto": "Cliente some e você nem percebe?",
    "ini": 0.0,
-   "fim": 2.48
+   "fim": 2.64
   },
   {
    "fala": "N1",
    "texto": "Deixa o pontua avisar por você.",
-   "ini": 2.72,
-   "fim": 4.68
+   "ini": 2.88,
+   "fim": 4.96
   },
   {
    "fala": "N2",
-   "texto": "Na aba Notificações, você liga os avisos uma vez.",
-   "ini": 4.88,
-   "fim": 8.64
+   "texto": "Você escolhe por onde avisar: WhatsApp, SMS ou e-mail.",
+   "ini": 5.2,
+   "fim": 9.68
   },
   {
    "fala": "N3",
-   "texto": "Falta pouco pro prêmio.",
-   "ini": 8.88,
-   "fim": 10.48
-  },
-  {
-   "fala": "N3",
-   "texto": "Cliente sumido há trinta dias.",
-   "ini": 10.8,
-   "fim": 12.96
-  },
-  {
-   "fala": "N3",
-   "texto": "Aniversário.",
-   "ini": 13.12,
-   "fim": 14.16
+   "texto": "E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.",
+   "ini": 10.08,
+   "fim": 16.76
   },
   {
    "fala": "N4",
-   "texto": "Daí em diante, eles saem sozinhos, no WhatsApp do cliente.",
-   "ini": 14.4,
-   "fim": 18.2
+   "texto": "Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.",
+   "ini": 16.96,
+   "fim": 20.96
   },
   {
    "fala": "N5",
    "texto": "Avisos automáticos: a partir do plano Basic.",
-   "ini": 18.4,
-   "fim": 21.76
+   "ini": 21.44,
+   "fim": 24.72
   },
   {
    "fala": "N6",
    "texto": "Crie o seu grátis.",
-   "ini": 21.92,
-   "fim": 23.12
+   "ini": 25.04,
+   "fim": 26.24
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 23.36,
-   "fim": 24.4
+   "ini": 26.4,
+   "fim": 27.36
   }
  ]
 }
