@@ -11,9 +11,15 @@ Versão 2 · 22/09/2026 (inclui resumo oficial da plataforma) · Toda peça (art
 - **Base de clientes própria:** histórico e participação de cada cliente — um canal que é do negócio, não da rede social nem do app de delivery.
 - **Multicanal:** WhatsApp (principal), e-mail e SMS.
 - **IA que ajuda a montar a campanha** e a escrever as mensagens — não precisa entender de marketing.
-- Montagem em minutos. **Plano grátis com limite** (sem cartão de crédito); planos pagos por assinatura (SaaS).
+- Montagem em minutos. Planos oficiais (informados pelo Rafael em 28/10/2026 — únicos números de plano permitidos):
+  - **Starter (grátis):** até 100 clientes, 1 campanha ativa de carimbo ou pontos, 50 WhatsApp/mês; a marca pontua aparece.
+  - **Basic R$ 39/mês:** 1.000 clientes, 5 campanhas, 200 WhatsApp + 50 SMS/mês.
+  - **Pro R$ 69/mês (de R$ 99):** clientes e campanhas ilimitados, 500 WhatsApp + 150 SMS/mês, automações e vários usuários.
+  - **Business R$ 179/mês:** 2.000 WhatsApp + 500 SMS/mês, várias lojas, API e suporte prioritário.
+  - Todos os planos: e-mail ilimitado e grátis. Do Basic em diante: avisos automáticos, Relacionamento e cartão personalizado.
+  - Regras: o preço do Pro é promocional — não inventar prazo ("só hoje", "últimos dias"). As automações (aniversário, sumido, falta pouco…) são do Basic em diante: nunca dizer que estão no plano grátis.
 - CUIDADOS: mensagens de WhatsApp/SMS podem ter custo por volume → nunca dizer "mensagens ilimitadas/grátis". Mensagens só para clientes que autorizaram (LGPD) → nunca sugerir disparo em massa/spam.
-- NÃO prometer: número de clientes atendidos, resultados de clientes, integrações, preços, limites exatos do plano grátis — até existirem dados oficiais.
+- NÃO prometer: número de clientes atendidos, resultados de clientes, integrações. Preços e limites: só os da lista oficial acima.
 
 ## 2. Para quem falamos
 Dono(a) de pequeno negócio de **compra recorrente**, que atende no balcão e vive de cliente que volta:
