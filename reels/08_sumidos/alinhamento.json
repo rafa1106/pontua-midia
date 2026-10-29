@@ -4,7 +4,7 @@
    "id": "N1",
    "texto": "Cliente sumiu? O pontua percebe, e já monta o convite pra ele voltar.",
    "ini": 0.0,
-   "fim": 5.0
+   "fim": 4.8
   },
   {
    "id": "N2",
@@ -16,25 +16,25 @@
    "id": "N3",
    "texto": "Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.",
    "ini": 10.08,
-   "fim": 16.4
+   "fim": 16.8
   },
   {
    "id": "N4",
    "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
-   "ini": 16.72,
-   "fim": 21.2
+   "ini": 16.92,
+   "fim": 21.44
   },
   {
    "id": "N5",
-   "texto": "O convite sai por SMS e e-mail. A partir do plano Basic.",
-   "ini": 21.227,
-   "fim": 25.84
+   "texto": "E o convite chega direto no WhatsApp do cliente.",
+   "ini": 21.467,
+   "fim": 24.64
   },
   {
    "id": "N6",
-   "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 25.893,
-   "fim": 28.24
+   "texto": "Comece agora. Link na bio.",
+   "ini": 24.8,
+   "fim": 26.88
   }
  ],
  "frases": [
@@ -42,13 +42,13 @@
    "fala": "N1",
    "texto": "Cliente sumiu?",
    "ini": 0.0,
-   "fim": 0.96
+   "fim": 1.04
   },
   {
    "fala": "N1",
    "texto": "O pontua percebe, e já monta o convite pra ele voltar.",
-   "ini": 1.2,
-   "fim": 5.0
+   "ini": 1.44,
+   "fim": 4.8
   },
   {
    "fala": "N2",
@@ -60,37 +60,31 @@
    "fala": "N3",
    "texto": "Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.",
    "ini": 10.08,
-   "fim": 16.4
+   "fim": 16.8
   },
   {
    "fala": "N4",
    "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
-   "ini": 16.72,
-   "fim": 21.2
+   "ini": 16.92,
+   "fim": 21.44
   },
   {
    "fala": "N5",
-   "texto": "O convite sai por SMS e e-mail.",
-   "ini": 21.227,
-   "fim": 24.08
-  },
-  {
-   "fala": "N5",
-   "texto": "A partir do plano Basic.",
-   "ini": 24.12,
-   "fim": 25.84
+   "texto": "E o convite chega direto no WhatsApp do cliente.",
+   "ini": 21.467,
+   "fim": 24.64
   },
   {
    "fala": "N6",
-   "texto": "Crie o seu grátis.",
-   "ini": 25.893,
-   "fim": 27.2
+   "texto": "Comece agora.",
+   "ini": 24.8,
+   "fim": 25.92
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 27.32,
-   "fim": 28.24
+   "ini": 26.04,
+   "fim": 26.88
   }
  ]
 }

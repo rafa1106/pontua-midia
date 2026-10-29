@@ -10,36 +10,36 @@
    "id": "N2",
    "texto": "Escolha o tema e veja a prévia na hora.",
    "ini": 3.6,
-   "fim": 6.24
+   "fim": 6.32
   },
   {
    "id": "N3",
    "texto": "Coloque o seu logo.",
-   "ini": 6.4,
-   "fim": 7.6
+   "ini": 6.48,
+   "fim": 7.68
   },
   {
    "id": "N4",
    "texto": "E dá pra usar uma imagem sua de fundo, e um ícone próprio no carimbo.",
-   "ini": 7.76,
-   "fim": 12.0
+   "ini": 7.84,
+   "fim": 11.92
   },
   {
    "id": "N5",
    "texto": "No celular da cliente, o cartão aparece com o novo visual.",
-   "ini": 12.16,
-   "fim": 15.68
+   "ini": 12.08,
+   "fim": 15.72
   },
   {
    "id": "N6",
-   "texto": "Cartão personalizado: a partir do plano Basic.",
-   "ini": 16.08,
-   "fim": 19.36
+   "texto": "É a sua marca, todo dia, no celular do cliente.",
+   "ini": 15.92,
+   "fim": 19.6
   },
   {
    "id": "N7",
-   "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 19.68,
+   "texto": "Comece agora. Link na bio.",
+   "ini": 19.92,
    "fim": 22.24
   }
  ],
@@ -54,37 +54,37 @@
    "fala": "N2",
    "texto": "Escolha o tema e veja a prévia na hora.",
    "ini": 3.6,
-   "fim": 6.24
+   "fim": 6.32
   },
   {
    "fala": "N3",
    "texto": "Coloque o seu logo.",
-   "ini": 6.4,
-   "fim": 7.6
+   "ini": 6.48,
+   "fim": 7.68
   },
   {
    "fala": "N4",
    "texto": "E dá pra usar uma imagem sua de fundo, e um ícone próprio no carimbo.",
-   "ini": 7.76,
-   "fim": 12.0
+   "ini": 7.84,
+   "fim": 11.92
   },
   {
    "fala": "N5",
    "texto": "No celular da cliente, o cartão aparece com o novo visual.",
-   "ini": 12.16,
-   "fim": 15.68
+   "ini": 12.08,
+   "fim": 15.72
   },
   {
    "fala": "N6",
-   "texto": "Cartão personalizado: a partir do plano Basic.",
-   "ini": 16.08,
-   "fim": 19.36
+   "texto": "É a sua marca, todo dia, no celular do cliente.",
+   "ini": 15.92,
+   "fim": 19.6
   },
   {
    "fala": "N7",
-   "texto": "Crie o seu grátis.",
-   "ini": 19.68,
-   "fim": 20.96
+   "texto": "Comece agora.",
+   "ini": 19.92,
+   "fim": 21.0
   },
   {
    "fala": "N7",

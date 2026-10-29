@@ -8,33 +8,33 @@
   },
   {
    "id": "N2",
-   "texto": "Você escolhe por onde avisar: WhatsApp, SMS ou e-mail.",
+   "texto": "Os avisos chegam no WhatsApp do cliente. E, se quiser, também por SMS ou e-mail.",
    "ini": 5.2,
-   "fim": 9.68
+   "fim": 11.4
   },
   {
    "id": "N3",
    "texto": "E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.",
-   "ini": 10.08,
-   "fim": 16.76
+   "ini": 11.6,
+   "fim": 18.6
   },
   {
    "id": "N4",
    "texto": "Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.",
-   "ini": 16.96,
-   "fim": 20.96
+   "ini": 18.8,
+   "fim": 23.0
   },
   {
    "id": "N5",
-   "texto": "Avisos automáticos: a partir do plano Basic.",
-   "ini": 21.44,
-   "fim": 24.72
+   "texto": "Sem você precisar lembrar de nada.",
+   "ini": 23.2,
+   "fim": 25.48
   },
   {
    "id": "N6",
-   "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 25.04,
-   "fim": 27.36
+   "texto": "Comece agora. Link na bio.",
+   "ini": 25.68,
+   "fim": 27.92
   }
  ],
  "frases": [
@@ -52,39 +52,45 @@
   },
   {
    "fala": "N2",
-   "texto": "Você escolhe por onde avisar: WhatsApp, SMS ou e-mail.",
+   "texto": "Os avisos chegam no WhatsApp do cliente.",
    "ini": 5.2,
-   "fim": 9.68
+   "fim": 7.68
+  },
+  {
+   "fala": "N2",
+   "texto": "E, se quiser, também por SMS ou e-mail.",
+   "ini": 7.84,
+   "fim": 11.4
   },
   {
    "fala": "N3",
    "texto": "E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.",
-   "ini": 10.08,
-   "fim": 16.76
+   "ini": 11.6,
+   "fim": 18.6
   },
   {
    "fala": "N4",
    "texto": "Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.",
-   "ini": 16.96,
-   "fim": 20.96
+   "ini": 18.8,
+   "fim": 23.0
   },
   {
    "fala": "N5",
-   "texto": "Avisos automáticos: a partir do plano Basic.",
-   "ini": 21.44,
-   "fim": 24.72
+   "texto": "Sem você precisar lembrar de nada.",
+   "ini": 23.2,
+   "fim": 25.48
   },
   {
    "fala": "N6",
-   "texto": "Crie o seu grátis.",
-   "ini": 25.04,
-   "fim": 26.24
+   "texto": "Comece agora.",
+   "ini": 25.68,
+   "fim": 26.72
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 26.4,
-   "fim": 27.36
+   "ini": 26.88,
+   "fim": 27.92
   }
  ]
 }

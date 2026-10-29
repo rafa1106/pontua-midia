@@ -4,37 +4,37 @@
    "id": "N1",
    "texto": "Semana parada? O pontua já deixa as ações prontas pra você.",
    "ini": 0.0,
-   "fim": 4.52
+   "fim": 4.24
   },
   {
    "id": "N2",
    "texto": "Aviso de carimbo em dobro, pra quem anda sumido.",
-   "ini": 4.72,
-   "fim": 7.96
+   "ini": 4.64,
+   "fim": 7.72
   },
   {
    "id": "N3",
    "texto": "Mimo de aniversário: um carimbo de presente pros aniversariantes do mês.",
-   "ini": 8.16,
-   "fim": 12.64
+   "ini": 7.92,
+   "fim": 12.32
   },
   {
    "id": "N4",
    "texto": "E carimbo surpresa pra quem está perto do prêmio.",
-   "ini": 12.8,
-   "fim": 15.88
+   "ini": 12.48,
+   "fim": 15.44
   },
   {
    "id": "N5",
-   "texto": "Você escolhe, confere o resumo e envia, por SMS e e-mail. A partir do plano Basic.",
-   "ini": 16.08,
-   "fim": 22.88
+   "texto": "Você escolhe, confere o resumo, e a mensagem chega no WhatsApp do cliente.",
+   "ini": 15.6,
+   "fim": 20.24
   },
   {
    "id": "N6",
-   "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 22.96,
-   "fim": 25.2
+   "texto": "Comece agora. Link na bio.",
+   "ini": 20.48,
+   "fim": 22.72
   }
  ],
  "frases": [
@@ -42,55 +42,49 @@
    "fala": "N1",
    "texto": "Semana parada?",
    "ini": 0.0,
-   "fim": 1.32
+   "fim": 1.28
   },
   {
    "fala": "N1",
    "texto": "O pontua já deixa as ações prontas pra você.",
-   "ini": 1.52,
-   "fim": 4.52
+   "ini": 1.44,
+   "fim": 4.24
   },
   {
    "fala": "N2",
    "texto": "Aviso de carimbo em dobro, pra quem anda sumido.",
-   "ini": 4.72,
-   "fim": 7.96
+   "ini": 4.64,
+   "fim": 7.72
   },
   {
    "fala": "N3",
    "texto": "Mimo de aniversário: um carimbo de presente pros aniversariantes do mês.",
-   "ini": 8.16,
-   "fim": 12.64
+   "ini": 7.92,
+   "fim": 12.32
   },
   {
    "fala": "N4",
    "texto": "E carimbo surpresa pra quem está perto do prêmio.",
-   "ini": 12.8,
-   "fim": 15.88
+   "ini": 12.48,
+   "fim": 15.44
   },
   {
    "fala": "N5",
-   "texto": "Você escolhe, confere o resumo e envia, por SMS e e-mail.",
-   "ini": 16.08,
-   "fim": 21.12
-  },
-  {
-   "fala": "N5",
-   "texto": "A partir do plano Basic.",
-   "ini": 21.16,
-   "fim": 22.88
+   "texto": "Você escolhe, confere o resumo, e a mensagem chega no WhatsApp do cliente.",
+   "ini": 15.6,
+   "fim": 20.24
   },
   {
    "fala": "N6",
-   "texto": "Crie o seu grátis.",
-   "ini": 22.96,
-   "fim": 24.16
+   "texto": "Comece agora.",
+   "ini": 20.48,
+   "fim": 21.56
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 24.28,
-   "fim": 25.2
+   "ini": 21.76,
+   "fim": 22.72
   }
  ]
 }
