@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Cliente sumiu? O pontua percebe, e já monta o convite pra ele voltar.",
+   "ini": 0.0,
+   "fim": 5.04
+  },
+  {
+   "id": "N2",
+   "texto": "O painel mostra quantos clientes não aparecem há mais de trinta dias.",
+   "ini": 5.28,
+   "fim": 9.68
+  },
+  {
+   "id": "N3",
+   "texto": "Com um clique, vem tudo pronto: quem recebe, o texto, e um carimbo de presente pra quem voltar.",
+   "ini": 10.0,
+   "fim": 16.32
+  },
+  {
+   "id": "N4",
+   "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
+   "ini": 16.72,
+   "fim": 20.88
+  },
+  {
+   "id": "N5",
+   "texto": "O convite sai por SMS e e-mail. A partir do plano Basic.",
+   "ini": 21.28,
+   "fim": 25.84
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis. Link na bio.",
+   "ini": 26.0,
+   "fim": 28.24
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Cliente sumiu?",
+   "ini": 0.0,
+   "fim": 1.04
+  },
+  {
+   "fala": "N1",
+   "texto": "O pontua percebe, e já monta o convite pra ele voltar.",
+   "ini": 1.44,
+   "fim": 5.04
+  },
+  {
+   "fala": "N2",
+   "texto": "O painel mostra quantos clientes não aparecem há mais de trinta dias.",
+   "ini": 5.28,
+   "fim": 9.68
+  },
+  {
+   "fala": "N3",
+   "texto": "Com um clique, vem tudo pronto: quem recebe, o texto, e um carimbo de presente pra quem voltar.",
+   "ini": 10.0,
+   "fim": 16.32
+  },
+  {
+   "fala": "N4",
+   "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
+   "ini": 16.72,
+   "fim": 20.88
+  },
+  {
+   "fala": "N5",
+   "texto": "O convite sai por SMS e e-mail.",
+   "ini": 21.28,
+   "fim": 24.08
+  },
+  {
+   "fala": "N5",
+   "texto": "A partir do plano Basic.",
+   "ini": 24.24,
+   "fim": 25.84
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis.",
+   "ini": 26.0,
+   "fim": 27.16
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 27.28,
+   "fim": 28.24
+  }
+ ]
+}
