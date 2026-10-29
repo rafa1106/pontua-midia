@@ -10,6 +10,12 @@ from pathlib import Path
 VOZ_PADRAO = "ORgG8rwdAiMYRug8RJwR"   # Ana Alice - Friendly & Clear (pt-BR)
 
 
+def pronuncia(t):
+    """Ajustes só para a voz (o roteiro fica como está). "pontua" se fala como o verbo pontuar
+    (pon-TU-a): o acento em "pontúa" força a tônica no "tu". Mesmo tamanho, não desalinha os tempos."""
+    return re.sub(r"\b([Pp])ontua\b(?!\.club)", lambda m: m.group(1) + "ontúa", t)
+
+
 def tts(texto, voz, modelo):
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voz}/with-timestamps?output_format=mp3_44100_128",
@@ -23,7 +29,8 @@ def main(rid, voz, modelo):
     pasta = Path("reels") / rid
     texto = (pasta / "roteiro.txt").read_text(encoding="utf-8").strip()
     falas = [p.strip() for p in re.split(r"\n\s*\n", texto) if p.strip()]
-    texto = "\n\n".join(falas)
+    falas_voz = [pronuncia(f) for f in falas]
+    texto = "\n\n".join(falas_voz)
     try:
         out = tts(texto, voz, modelo)
     except urllib.error.HTTPError as e:
@@ -40,12 +47,12 @@ def main(rid, voz, modelo):
     # mapeia cada fala/frase para o intervalo dos seus caracteres
     full = "".join(chars)
     res, pos = {"falas": [], "frases": []}, 0
-    for i, f in enumerate(falas, 1):
+    for i, (f0, f) in enumerate(zip(falas, falas_voz), 1):
         k = full.find(f[:12], pos)
         if k < 0:
             k = pos
         e = min(len(chars) - 1, k + len(f) - 1)
-        res["falas"].append({"id": f"N{i}", "texto": f, "ini": round(ini[k], 3), "fim": round(fim[e], 3)})
+        res["falas"].append({"id": f"N{i}", "texto": f0, "ini": round(ini[k], 3), "fim": round(fim[e], 3)})
         for m in re.finditer(r"[^.!?…]+[.!?…]*", f):
             s = m.group(0).strip()
             if not s:
