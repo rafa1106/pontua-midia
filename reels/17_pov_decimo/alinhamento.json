@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "POV: o décimo café chegou.",
+   "ini": 0.0,
+   "fim": 2.88
+  },
+  {
+   "id": "N2",
+   "texto": "Você pede o de sempre, e a atendente dá o último carimbo.",
+   "ini": 3.28,
+   "fim": 7.04
+  },
+  {
+   "id": "N3",
+   "texto": "Na hora, o celular vibra: cartão completo, no WhatsApp.",
+   "ini": 7.44,
+   "fim": 11.36
+  },
+  {
+   "id": "N4",
+   "texto": "O prêmio já está lá, esperando: esse café é por conta da casa.",
+   "ini": 11.68,
+   "fim": 16.56
+  },
+  {
+   "id": "N5",
+   "texto": "É desse momento que o cliente lembra. E é por ele que volta.",
+   "ini": 16.8,
+   "fim": 20.64
+  },
+  {
+   "id": "N6",
+   "texto": "Dê esse momento pro seu cliente. Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 20.88,
+   "fim": 26.88
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "POV: o décimo café chegou.",
+   "ini": 0.0,
+   "fim": 2.88
+  },
+  {
+   "fala": "N2",
+   "texto": "Você pede o de sempre, e a atendente dá o último carimbo.",
+   "ini": 3.28,
+   "fim": 7.04
+  },
+  {
+   "fala": "N3",
+   "texto": "Na hora, o celular vibra: cartão completo, no WhatsApp.",
+   "ini": 7.44,
+   "fim": 11.36
+  },
+  {
+   "fala": "N4",
+   "texto": "O prêmio já está lá, esperando: esse café é por conta da casa.",
+   "ini": 11.68,
+   "fim": 16.56
+  },
+  {
+   "fala": "N5",
+   "texto": "É desse momento que o cliente lembra.",
+   "ini": 16.8,
+   "fim": 19.04
+  },
+  {
+   "fala": "N5",
+   "texto": "E é por ele que volta.",
+   "ini": 19.2,
+   "fim": 20.64
+  },
+  {
+   "fala": "N6",
+   "texto": "Dê esse momento pro seu cliente.",
+   "ini": 20.88,
+   "fim": 22.96
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 23.12,
+   "fim": 25.92
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 26.04,
+   "fim": 26.88
+  }
+ ]
+}
