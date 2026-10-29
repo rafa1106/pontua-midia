@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Cafeteria: dez cafés, um grátis. Sem papel.",
+   "ini": 0.0,
+   "fim": 4.16
+  },
+  {
+   "id": "N2",
+   "texto": "Seu cliente toma o cafezinho de todo dia, e o carimbo vai direto pro celular dele.",
+   "ini": 4.4,
+   "fim": 9.76
+  },
+  {
+   "id": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 10.0,
+   "fim": 14.32
+  },
+  {
+   "id": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.72,
+   "fim": 21.36
+  },
+  {
+   "id": "N5",
+   "texto": "E o décimo café é por conta da casa.",
+   "ini": 21.52,
+   "fim": 24.12
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 24.32,
+   "fim": 28.08
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Cafeteria: dez cafés, um grátis.",
+   "ini": 0.0,
+   "fim": 3.04
+  },
+  {
+   "fala": "N1",
+   "texto": "Sem papel.",
+   "ini": 3.2,
+   "fim": 4.16
+  },
+  {
+   "fala": "N2",
+   "texto": "Seu cliente toma o cafezinho de todo dia, e o carimbo vai direto pro celular dele.",
+   "ini": 4.4,
+   "fim": 9.76
+  },
+  {
+   "fala": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 10.0,
+   "fim": 14.32
+  },
+  {
+   "fala": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.72,
+   "fim": 21.36
+  },
+  {
+   "fala": "N5",
+   "texto": "E o décimo café é por conta da casa.",
+   "ini": 21.52,
+   "fim": 24.12
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 24.32,
+   "fim": 26.96
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 27.12,
+   "fim": 28.08
+  }
+ ]
+}

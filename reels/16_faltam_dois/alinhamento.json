@@ -1,0 +1,102 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Por que o cliente volta mais rápido quando faltam dois?",
+   "ini": 0.0,
+   "fim": 3.44
+  },
+  {
+   "id": "N2",
+   "texto": "Num estudo com o cartão de uma cafeteria, de dez cafés, um grátis, os pesquisadores acompanharam cada compra.",
+   "ini": 3.76,
+   "fim": 11.4
+  },
+  {
+   "id": "N3",
+   "texto": "E perceberam: quanto mais perto do café grátis, mais rápido o cliente voltava.",
+   "ini": 11.6,
+   "fim": 17.36
+  },
+  {
+   "id": "N4",
+   "texto": "É o efeito do gradiente de meta. Quando a linha de chegada aparece, a gente acelera.",
+   "ini": 17.6,
+   "fim": 23.12
+  },
+  {
+   "id": "N5",
+   "texto": "Mas tem um detalhe: o cliente precisa ver quanto falta.",
+   "ini": 23.36,
+   "fim": 27.28
+  },
+  {
+   "id": "N6",
+   "texto": "No pontua, cada carimbo vira um aviso no WhatsApp, mostrando quanto falta pro prêmio.",
+   "ini": 27.52,
+   "fim": 32.96
+  },
+  {
+   "id": "N7",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 33.36,
+   "fim": 37.2
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Por que o cliente volta mais rápido quando faltam dois?",
+   "ini": 0.0,
+   "fim": 3.44
+  },
+  {
+   "fala": "N2",
+   "texto": "Num estudo com o cartão de uma cafeteria, de dez cafés, um grátis, os pesquisadores acompanharam cada compra.",
+   "ini": 3.76,
+   "fim": 11.4
+  },
+  {
+   "fala": "N3",
+   "texto": "E perceberam: quanto mais perto do café grátis, mais rápido o cliente voltava.",
+   "ini": 11.6,
+   "fim": 17.36
+  },
+  {
+   "fala": "N4",
+   "texto": "É o efeito do gradiente de meta.",
+   "ini": 17.6,
+   "fim": 19.76
+  },
+  {
+   "fala": "N4",
+   "texto": "Quando a linha de chegada aparece, a gente acelera.",
+   "ini": 20.16,
+   "fim": 23.12
+  },
+  {
+   "fala": "N5",
+   "texto": "Mas tem um detalhe: o cliente precisa ver quanto falta.",
+   "ini": 23.36,
+   "fim": 27.28
+  },
+  {
+   "fala": "N6",
+   "texto": "No pontúa, cada carimbo vira um aviso no WhatsApp, mostrando quanto falta pro prêmio.",
+   "ini": 27.52,
+   "fim": 32.96
+  },
+  {
+   "fala": "N7",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 33.36,
+   "fim": 36.08
+  },
+  {
+   "fala": "N7",
+   "texto": "Link na bio.",
+   "ini": 36.24,
+   "fim": 37.2
+  }
+ ]
+}
