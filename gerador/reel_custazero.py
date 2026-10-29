@@ -85,19 +85,19 @@ window.R=async function(t){{
   $('zero').style.opacity=cl((t-(z0-.05))/.1)*(1-zo); $('zero').style.transform=`scale(${{.6+.4*zk}}) rotate(${{(1-zk)*-8}}deg)`;
   // N2: o cartão real no celular do cliente
   show('c2',t,n2a,n3a-.05);
-  const p1=ease((t-(n2a+.05))/.5), p1o=cl((t-(n3a-.25))/.25);
+  const p1=ease((t-(n2a+.05))/.5), p1o=cl((t-(n3a-.1))/.25);
   $('p1').style.opacity=cl((t-(n2a+.05))/.2)*(1-p1o); $('p1').style.transform=`translateY(${{(1-p1)*400-p1o*80}}px) scale(${{1-.03*p1o}})`;
   // N3: o cadastro real pelo QR (gravação acelerada)
   show('c3',t,n3a,n4a-.05);
-  const p2=ease((t-(n3a+.05))/.5), p2o=cl((t-(n4a-.25))/.25);
-  $('p2').style.opacity=cl((t-(n3a+.05))/.2)*(1-p2o); $('p2').style.transform=`translateY(${{(1-p2)*400-p2o*80}}px) scale(${{1-.03*p2o}})`;
+  const p2=ease((t-(n3a-.05))/.5), p2o=cl((t-(n4a-.1))/.25);
+  $('p2').style.opacity=cl((t-(n3a-.05))/.2)*(1-p2o); $('p2').style.transform=`translateY(${{(1-p2)*400-p2o*80}}px) scale(${{1-.03*p2o}})`;
   const vt=pw([[n3a,0],[n3a+.6,0],[n4a-.3,19.9]],t);
   setImg($('vq'),`${{FQ}}/${{pad(Math.min(NFQ,Math.max(1,Math.round(vt*30)+1)))}}.jpg`,ps);
   $('tela').style.opacity=Math.max(io(t,n2a+.3,n3a-.05,.3,.2),io(t,n3a+.3,n4a-.05,.3,.2));
   // N4: o aviso real no WhatsApp
   show('c4',t,n4a,n5a-.05);
-  const wi=back((t-(n4a+.1))/.5), wo=cl((t-(n5a-.25))/.3);
-  $('wa').style.opacity=cl((t-(n4a+.1))/.15)*(1-wo); $('wa').style.transform=`translateY(${{(1-wi)*-220-wo*160}}px) scale(${{.96+.04*wi}})`;
+  const wi=back((t-(n4a-.05))/.5), wo=cl((t-(n5a-.25))/.3);
+  $('wa').style.opacity=cl((t-(n4a-.05))/.15)*(1-wo); $('wa').style.transform=`translateY(${{(1-wi)*-220-wo*160}}px) scale(${{.96+.04*wi}})`;
   pop('todo',t,n4a+.5*(n4b-n4a),n5a-.05,-2);
   // N5: tudo isso, de graça (3 já vistos + 2 da fala)
   show('c5',t,n5a,n6a-.05);
