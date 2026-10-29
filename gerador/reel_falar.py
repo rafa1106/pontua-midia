@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Reels 08 e 09 — área "Falar com clientes" (envios prontos por regra; saem por SMS e e-mail).
+"""Reels 08 e 09 — área "Falar com clientes" (envios prontos por regra; chegam no WhatsApp do cliente).
 
   python3 reel_falar.py sumidos <pasta> [preview t1,t2]   # fluxo 06 (Açaí da Praça)
   python3 reel_falar.py acoes   <pasta> [preview t1,t2]   # fluxo 05, 2ª parte (Pet Feliz)
@@ -19,19 +19,19 @@ WT = 520
 LW, LH = 920, 330
 
 SMS = {
-    "sumidos": [("Açaí da Praça", "Oi Maria! Sentimos sua falta na Açaí da Praça. Que tal passar aqui hoje?", "convite (prévia do sistema, nome de exemplo)")],
+    "sumidos": [("Açaí da Praça", "Oi Maria! Sentimos sua falta na Açaí da Praça. Que tal passar aqui hoje?", "convite · nome de exemplo")],
     "acoes": [
         ("Pet Feliz", "Oi Eduardo Alves! Hoje tem carimbo em dobro na Pet Feliz. Te esperamos!", "carimbo em dobro"),
-        ("Pet Feliz", "Oi Vinicius Barbosa! Voce ganhou 1 carimbo de presente na Pet Feliz. Aproveite e volte sempre!", "mimo de aniversário"),
-        ("Pet Feliz", "Oi Eduardo Alves! Voce ganhou 1 carimbo de presente na Pet Feliz. Aproveite e volte sempre!", "carimbo surpresa"),
+        ("Pet Feliz", "Oi Vinicius Barbosa! Você ganhou 1 carimbo de presente na Pet Feliz. Aproveite e volte sempre!", "mimo de aniversário"),
+        ("Pet Feliz", "Oi Eduardo Alves! Você ganhou 1 carimbo de presente na Pet Feliz. Aproveite e volte sempre!", "carimbo surpresa"),
     ],
 }
 
 CAPS = {
     "sumidos": [("1", "O painel avisa", "quem sumiu", "hl"), ("2", "Convite pronto", "em um clique", "am"),
-                ("3", "Ajusta, confere", "e envia", "hl"), ("✉", "Sai por", "SMS e e-mail", "hl")],
+                ("3", "Ajusta, confere", "e envia", "hl"), ("wa", "Chega no", "WhatsApp", "hl")],
     "acoes": [("1", "Carimbo em dobro", "pra quem sumiu", "am"), ("2", "Mimo de", "aniversário", "hl"),
-              ("3", "Carimbo surpresa", "perto do prêmio", "am"), ("✓", "Confere e envia", "SMS e e-mail", "hl")],
+              ("3", "Carimbo surpresa", "perto do prêmio", "am"), ("wa", "Chega no WhatsApp", "do cliente", "hl")],
 }
 
 HOOK = {
@@ -51,9 +51,9 @@ def js_sumidos():
     [n2a+.4, n3a+.3, [.39,.93,2.0], 'sumidos há 30+ dias', [.455,.94,.575,.97]],
     [n3a+1.5, tqr, [.66,.30,1.9], 'carimbo de presente', [.43,.215,.89,.28]],
     [tqr, ttx, [.66,.30,1.9], 'quem recebe', [.665,.175,.895,.25]],
-    [ttx, n4a, [.26,.49,2.2], 'o texto (prévia)', [.17,.445,.335,.545]],
-    [n4a, tre, [.66,.51,1.9], 'ajusta o texto', [.44,.49,.89,.56]],
-    [tre, ten, [.66,.42,1.55], 'resumo e custo', null],
+    [ttx, n4a, [.26,.545,2.6], 'o texto (prévia)', [.17,.465,.335,.56]],
+    [n4a, tre, [.62,.31,2.5], 'WhatsApp primeiro', [.445,.258,.78,.302]],
+    [tre, ten, [.66,.56,1.9], 'resumo e custo', null],
   ];
   const fim=ten, okT=ten+.25;   // depois do "envia": selo de enviado
 """
@@ -72,7 +72,7 @@ def js_acoes():
     [tan, n4a, [.66,.34,1.9], 'aniversariantes do mês', [.665,.27,.895,.335]],
     [n4a, tpe, [.66,.40,1.9], 'carimbo surpresa', [.44,.49,.89,.545]],
     [tpe, n5a, [.66,.40,1.9], 'perto do prêmio', [.665,.465,.895,.535]],
-    [tres, tenv, [.66,.42,1.55], 'resumo', null],
+    [tres, tenv, [.66,.56,1.9], 'resumo e custo', null],
   ];
   const fim=tenv, okT=tenv+.3;
 """
@@ -84,9 +84,9 @@ def build_for(tipo):
         fl = (work / "fl").as_uri()
         nfl = len(list((work / "fl").glob("*.jpg")))
         h1, h2 = HOOK[tipo]
-        caps = "".join(f'<div class="cap step" id="c{i + 2}"><span class="n">{n}</span><div>{a}<br><span class="{c}">{b}</span></div></div>'
+        caps = "".join(f'<div class="cap step" id="c{i + 2}">{'<span class="n wa">' + WA_ICON + '</span>' if n == 'wa' else '<span class="n">' + n + '</span>'}<div>{a}<br><span class="{c}">{b}</span></div></div>'
                        for i, (n, a, b, c) in enumerate(CAPS[tipo]))
-        sms = "".join(f'<div class="sms" id="s{i}"><div class="hd"><span class="ic">✉</span><span>SMS · <b>{rem}</b></span><span class="ev">{ev}</span></div>'
+        sms = "".join(f'<div class="sms" id="s{i}"><div class="hd"><span class="ic">{WA_ICON}</span><span>WhatsApp · <b>{rem}</b></span><span class="ev">{ev}</span></div>'
                       f'<div class="tx">{tx}</div></div>' for i, (rem, tx, ev) in enumerate(SMS[tipo]))
         n_ok = "8 clientes" if tipo == "sumidos" else "9 clientes"
         body = f"""{BG}{TOP}
@@ -96,9 +96,9 @@ def build_for(tipo):
   <div class="vp"><img id="sw" src="{fl}/0001.jpg"></div></div>
 <div id="lens"><img id="sl" src="{fl}/0001.jpg"><div id="lring"></div></div><div id="ltag"></div>
 <div class="badge" id="ok" style="left:0;right:0;margin:auto;width:max-content;top:1200px">✓ Envio a caminho · {n_ok}</div>
-<div id="stack" style="top:{660 if tipo == "sumidos" else 430}px">{sms}</div>
-<div id="plano"><div class="p1">Disponível</div><div class="p2">a partir do Basic</div><div class="p3">R$ 39/mês</div></div>
-{CTA}"""
+<div id="stack" style="top:{780 if tipo == "sumidos" else 430}px">{sms}</div>
+<div id="plano" style="display:none"></div>
+{CTA_PAGO}"""
         css = f"""
 #hook{{top:600px}}
 .cap .l.small2{{font-size:66px;font-weight:800;letter-spacing:-.035em;line-height:1.08;margin-top:44px;color:#EDE8FF}}
@@ -119,9 +119,9 @@ def build_for(tipo):
 .sms{{margin-bottom:26px;padding:26px 30px;border-radius:30px;background:rgba(248,246,255,.98);color:#141024;opacity:0;
   box-shadow:0 26px 70px rgba(0,0,0,.5),0 0 60px rgba(155,120,255,.35)}}
 .sms .hd{{display:flex;align-items:center;gap:14px;font-size:26px;color:#5B5473;font-weight:600}} .sms .hd b{{color:#141024}}
-.sms .ic{{width:46px;height:46px;border-radius:13px;background:#5B34E8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px}}
+.sms .ic svg{{width:28px;height:28px}} .sms .ic{{width:46px;height:46px;border-radius:13px;background:{C["green"]};color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px}}
 .sms .ev{{margin-left:auto;padding:6px 16px;border-radius:999px;background:#EDE8FF;color:#4A2BC8;font-size:21px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}}
-.sms .tx{{font-size:{40 if tipo == 'sumidos' else 34}px;line-height:1.36;margin-top:14px;color:#2A2440}}
+.sms .tx{{font-size:{46 if tipo == "sumidos" else 34}px;line-height:1.36;margin-top:14px;color:#2A2440}}
 #plano{{position:absolute;left:0;right:0;margin:auto;width:max-content;top:1330px;padding:36px 64px;border-radius:36px;text-align:center;opacity:0;
   background:linear-gradient(135deg,{C['violet2']},{C['violet']});box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 90px rgba(123,77,255,.8)}}
 #plano .p1{{font-size:32px;font-weight:700;color:#E6E0FF}} #plano .p2{{font-size:70px;font-weight:900;letter-spacing:-.035em;margin-top:6px}}
@@ -132,7 +132,7 @@ const S={json.dumps(S)}, U={json.dumps(U)}, T={total:.3f}, FL="{fl}", NFL={nfl};
 const VW={WW}, VH={VH}, VH0={VH0}, LW={LW}, LH={LH}, Z={Z};
 window.R=async function(t){{
   const [n1a,n1b]=S.N1,[n2a,n2b]=S.N2,[n3a,n3b]=S.N3,[n4a,n4b]=S.N4,[n5a,n5b]=S.N5,[n6a,n6b]=S.N6;
-  const ps=[], q=U['N1.2'], pb=U['N5.2']||(n5b-1.6);
+  const ps=[], q=U['N1.2'], pb=T+10;
   {js_sumidos() if tipo == "sumidos" else js_acoes()}
   // gancho
   const h1=ease((t-(n1a-.05))/.45), h2=ease((t-(q-.1))/.45);
@@ -165,7 +165,7 @@ window.R=async function(t){{
     else $('lring').style.opacity=0;
   }}
   pop('ok',t,okT,tsms+.2,-2);
-  // mensagens SMS reais
+  // mensagens no WhatsApp
   [...document.querySelectorAll('.sms')].forEach((e,i)=>{{ const t0=tsms+i*.55, k=back((t-t0)/.5);
     e.style.opacity=cl((t-t0)/.18)*(1-.55*ease((t-(pb-.1))/.4))*(1-ck); e.style.transform=`translateY(${{(1-k)*-100}}px) scale(${{.95+.05*k}})`; }});
   const pl=back((t-pb)/.5), plo=cl((t-(n6a-.3))/.25);

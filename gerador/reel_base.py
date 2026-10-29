@@ -66,12 +66,15 @@ body{{font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;color:{C
 .wa .ti{{font-size:40px;font-weight:800;margin-top:20px;letter-spacing:-.015em}}
 .wa .tx{{font-size:35px;line-height:1.36;margin-top:12px;color:#2A2440}}
 .wa .bt{{margin-top:22px;padding:22px;border-radius:20px;background:#EDE8FF;color:#4A2BC8;text-align:center;font-size:32px;font-weight:800}}
+.step .n.wa{{position:static;left:auto;right:auto;padding:0;border-radius:30px;opacity:1;color:#fff;
+  background:{C['green']};box-shadow:0 0 44px rgba(37,211,102,.55)}}
 #cta{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:56px;opacity:0;padding-bottom:160px}}
 #cta .lg{{height:96px}}
 #cta .t{{font-size:74px;font-weight:800;letter-spacing:-.04em;line-height:1.08;text-align:center}}
 #cta .pill{{padding:34px 56px;border-radius:999px;background:{C['amber']};color:#1A1030;font-size:46px;font-weight:900;
   box-shadow:0 14px 60px rgba(255,194,77,.4)}}
 #cta .hd2{{font-size:36px;font-weight:700;color:{C['muted']}}}
+#cta .nt{{position:absolute;bottom:330px;left:0;right:0;text-align:center;font-size:26px;font-weight:600;color:rgba(185,178,217,.6)}}
 """
 
 BG = """<div id="bg"><div class="grain"></div>
@@ -86,6 +89,16 @@ CTA = f"""<div id="cta">
   <div class="t">Fidelidade que acontece<br>no <span class="hl">WhatsApp</span> do seu cliente.</div>
   <div class="pill">Crie o seu grátis · link na bio</div>
   <div class="hd2">@pontua.club</div>
+</div>"""
+
+# CTA para Reels que mostram recursos de planos pagos: sem "grátis", sem preço/plano (atemporal);
+# uma linha discreta evita sugerir que tudo está no plano grátis.
+CTA_PAGO = f"""<div id="cta">
+  <img src="{LOGO_CLARA}" class="lg">
+  <div class="t">Fidelidade que acontece<br>no <span class="hl">WhatsApp</span> do seu cliente.</div>
+  <div class="pill">Comece agora · link na bio</div>
+  <div class="hd2">@pontua.club</div>
+  <div class="nt">recursos variam conforme o plano</div>
 </div>"""
 
 

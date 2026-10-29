@@ -37,23 +37,24 @@ def build(work):
   <div class="l small2" id="h2">Deixa o pontua<br><span class="hl">avisar por você.</span></div>
 </div>
 
-<div class="cap step" id="c2"><span class="n">1</span><div>Escolhe<br><span class="hl">por onde avisar</span></div></div>
+<div class="cap step" id="c2"><span class="n wa">{WA_ICON}</span><div>Avisa no <span class="hl">WhatsApp</span><br><span class="sm">+ SMS e e-mail, se quiser</span></div></div>
 <div class="cap step" id="c3"><span class="n">2</span><div>Liga os mimos<br><span class="am">automáticos</span></div></div>
 <div class="cap step" id="c4"><span class="n wa">{WA_ICON}</span><div>Saem sozinhos<br><span class="hl">no WhatsApp</span></div></div>
-<div class="cap step" id="c5"><span class="n">★</span><div>Avisos<br><span class="am">automáticos</span></div></div>
+<div class="cap step" id="c5"><span class="n">★</span><div>Sem você<br><span class="am">lembrar de nada</span></div></div>
 
 <div id="win">
   <div class="bar"><i></i><i></i><i></i><span class="url">🔒 pontua.club</span></div>
   <div class="vp"><img id="sw" src="{fl}/0001.jpg"></div>
 </div>
-<div id="lens"><img id="sl" src="{fl}/0001.jpg"><div id="lring"></div></div><div id="ltag">por onde avisar</div>
+<div id="lens"><img id="sl" src="{fl}/0001.jpg"><div id="lring"></div></div><div id="ltag">canais de aviso</div>
 
 <div id="stack">{cards}</div>
 <div id="nota">textos reais dos avisos · nomes de exemplo</div>
-<div id="plano"><div class="p1">Avisos automáticos</div><div class="p2">a partir do Basic</div><div class="p3">R$ 39/mês</div></div>
-{CTA}"""
+<div id="plano"><div class="p1">Avisos automáticos</div><div class="p2">no WhatsApp ✓</div></div>
+{CTA_PAGO}"""
     css = f"""
 #hook{{top:540px}}
+.step .sm{{font-size:40px;font-weight:700;color:#E6E0FF;letter-spacing:-.02em}}
 .cap .l.small2{{font-size:66px;font-weight:800;letter-spacing:-.035em;line-height:1.08;margin-top:44px;color:#EDE8FF}}
 #win{{position:absolute;left:{(W-WW)//2}px;top:{WT}px;width:{WW}px;border-radius:26px;overflow:hidden;background:#0F1220;opacity:0;
   box-shadow:0 0 0 2px rgba(183,156,255,.45),0 0 110px rgba(123,77,255,.5),0 50px 90px rgba(0,0,0,.6);transform-origin:50% 0}}
@@ -113,10 +114,10 @@ window.R=async function(t){{
   // lupa: canais (N2, desce WhatsApp → SMS → e-mail) e engajamento (N3)
   let L, alvo=null, tag;
   if(t<n3a){{
-    const tw=n2a+.42*d2, ts=n2a+.62*d2, te=n2a+.8*d2;
-    L=kf([[n2a,[.42,.44,2.0]],[tw,[.42,.44,2.0]],[ts,[.42,.58,2.0]],[te,[.42,.7,2.0]],[T,[.42,.7,2.0]]],t);
+    const q2=U['N2.2']||(n2a+.5*d2), d22=n2b-q2, tw=n2a+.25, ts=q2+.45*d22, te=q2+.75*d22;
+    L=kf([[n2a,[.42,.43,2.0]],[ts-.45,[.42,.43,2.0]],[ts,[.42,.58,2.0]],[te-.4,[.42,.58,2.0]],[te,[.42,.7,2.0]],[T,[.42,.7,2.0]]],t);
     alvo = t<tw-.3?null:(t<ts-.2?[.38,.49]:(t<te-.2?[.535,.68]:[.705,.79]));
-    tag='por onde avisar';
+    tag='canais de aviso';
   }} else {{
     L=[.43,.515,1.92]; tag='mimos automáticos';
     const tb=n3a+2.0, ta=n3a+3.6, td=n3a+4.8;

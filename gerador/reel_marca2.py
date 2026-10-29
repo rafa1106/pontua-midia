@@ -25,7 +25,7 @@ def build(work):
     S, U, total = marcas(work)
     u = {k: (work / k).as_uri() for k in ("fl", "fc", "fl2", "fc2", "assets")}
     n = {k: len(list((work / k).glob("*.jpg"))) for k in ("fl", "fc", "fl2", "fc2")}
-    cta_html = CTA
+    cta_html = CTA_PAGO
     body = f"""{BG}{TOP}
 <div class="cap" id="hook">
   <div class="l" id="h1">Seu cartão com<br>a <span class="am">cara do seu</span><br><span class="am">negócio</span></div>
@@ -35,7 +35,7 @@ def build(work):
 <div class="cap step" id="c3"><span class="n">2</span><div>Coloca<br><span class="hl">o seu logo</span></div></div>
 <div class="cap step" id="c4"><span class="n">3</span><div>Sua imagem de fundo<br><span class="am">e ícone próprio</span></div></div>
 <div class="cap step" id="c5"><span class="n">✓</span><div>No celular<br><span class="hl">da cliente</span></div></div>
-<div class="cap step" id="c6"><span class="n">★</span><div>Cartão<br><span class="am">personalizado</span></div></div>
+<div class="cap step" id="c6"><span class="n">★</span><div>A sua marca<br><span class="am">no celular do cliente</span></div></div>
 
 <div id="win">
   <div class="bar"><i></i><i></i><i></i><span class="url">🔒 pontua.club</span></div>
@@ -50,7 +50,7 @@ def build(work):
 <div id="who">antes</div>
 
 <div class="badge" id="logo" style="left:0;right:0;margin:auto;width:max-content;top:1490px">✓ Logo enviado</div>
-<div id="plano"><div class="p1">Disponível a partir do</div><div class="p2">Plano Basic</div><div class="p3">R$ 39/mês</div></div>
+<div id="plano" style="display:none"></div>
 {cta_html}"""
     css = f"""
 #hook{{top:600px}}
