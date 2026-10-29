@@ -1,0 +1,102 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Cliente que some não avisa.",
+   "ini": 0.0,
+   "fim": 2.24
+  },
+  {
+   "id": "N2",
+   "texto": "Um dia ele simplesmente para de vir. E você só percebe semanas depois.",
+   "ini": 2.48,
+   "fim": 8.32
+  },
+  {
+   "id": "N3",
+   "texto": "Na correria do dia a dia, ele só esqueceu de você.",
+   "ini": 8.56,
+   "fim": 11.92
+  },
+  {
+   "id": "N4",
+   "texto": "Com o pontua, cada carimbo vira um aviso no WhatsApp, mostrando quanto falta pro prêmio.",
+   "ini": 12.4,
+   "fim": 18.32
+  },
+  {
+   "id": "N5",
+   "texto": "Faltam dois. Ele lembra. E volta.",
+   "ini": 18.56,
+   "fim": 21.6
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 22.0,
+   "fim": 25.68
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Cliente que some não avisa.",
+   "ini": 0.0,
+   "fim": 2.24
+  },
+  {
+   "fala": "N2",
+   "texto": "Um dia ele simplesmente para de vir.",
+   "ini": 2.48,
+   "fim": 5.2
+  },
+  {
+   "fala": "N2",
+   "texto": "E você só percebe semanas depois.",
+   "ini": 5.6,
+   "fim": 8.32
+  },
+  {
+   "fala": "N3",
+   "texto": "Na correria do dia a dia, ele só esqueceu de você.",
+   "ini": 8.56,
+   "fim": 11.92
+  },
+  {
+   "fala": "N4",
+   "texto": "Com o pontúa, cada carimbo vira um aviso no WhatsApp, mostrando quanto falta pro prêmio.",
+   "ini": 12.4,
+   "fim": 18.32
+  },
+  {
+   "fala": "N5",
+   "texto": "Faltam dois.",
+   "ini": 18.56,
+   "fim": 19.72
+  },
+  {
+   "fala": "N5",
+   "texto": "Ele lembra.",
+   "ini": 19.92,
+   "fim": 20.76
+  },
+  {
+   "fala": "N5",
+   "texto": "E volta.",
+   "ini": 20.96,
+   "fim": 21.6
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 22.0,
+   "fim": 24.56
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 24.72,
+   "fim": 25.68
+  }
+ ]
+}

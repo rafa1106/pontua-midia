@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "POV: você entrou no clube de fidelidade sem baixar nenhum aplicativo.",
+   "ini": 0.0,
+   "fim": 5.32
+  },
+  {
+   "id": "N2",
+   "texto": "Apontou a câmera pro QR Code do balcão.",
+   "ini": 5.52,
+   "fim": 8.0
+  },
+  {
+   "id": "N3",
+   "texto": "Colocou o nome e o WhatsApp.",
+   "ini": 8.32,
+   "fim": 10.16
+  },
+  {
+   "id": "N4",
+   "texto": "Confirmou pelo próprio WhatsApp.",
+   "ini": 10.32,
+   "fim": 12.32
+  },
+  {
+   "id": "N5",
+   "texto": "Pronto: o cartão já está no celular. Menos de um minuto, e sem papel.",
+   "ini": 12.48,
+   "fim": 17.6
+  },
+  {
+   "id": "N6",
+   "texto": "Pro seu cliente, é fácil assim. Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 17.92,
+   "fim": 24.16
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "POV: você entrou no clube de fidelidade sem baixar nenhum aplicativo.",
+   "ini": 0.0,
+   "fim": 5.32
+  },
+  {
+   "fala": "N2",
+   "texto": "Apontou a câmera pro QR Code do balcão.",
+   "ini": 5.52,
+   "fim": 8.0
+  },
+  {
+   "fala": "N3",
+   "texto": "Colocou o nome e o WhatsApp.",
+   "ini": 8.32,
+   "fim": 10.16
+  },
+  {
+   "fala": "N4",
+   "texto": "Confirmou pelo próprio WhatsApp.",
+   "ini": 10.32,
+   "fim": 12.32
+  },
+  {
+   "fala": "N5",
+   "texto": "Pronto: o cartão já está no celular.",
+   "ini": 12.48,
+   "fim": 15.0
+  },
+  {
+   "fala": "N5",
+   "texto": "Menos de um minuto, e sem papel.",
+   "ini": 15.2,
+   "fim": 17.6
+  },
+  {
+   "fala": "N6",
+   "texto": "Pro seu cliente, é fácil assim.",
+   "ini": 17.92,
+   "fim": 20.12
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 20.32,
+   "fim": 22.96
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 23.12,
+   "fim": 24.16
+  }
+ ]
+}
