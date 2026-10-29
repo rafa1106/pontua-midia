@@ -1,0 +1,96 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Seu negócio está nessa lista?",
+   "ini": 0.0,
+   "fim": 1.76
+  },
+  {
+   "id": "N2",
+   "texto": "Cafeteria e padaria: o décimo café é por conta da casa.",
+   "ini": 2.32,
+   "fim": 6.96
+  },
+  {
+   "id": "N3",
+   "texto": "Salão e barbearia: o corte que completa o cartão.",
+   "ini": 7.2,
+   "fim": 10.96
+  },
+  {
+   "id": "N4",
+   "texto": "Pet shop: o banho que vira prêmio.",
+   "ini": 11.28,
+   "fim": 14.0
+  },
+  {
+   "id": "N5",
+   "texto": "Açaí, sorveteria e lanchonete: o cliente volta pra completar.",
+   "ini": 14.32,
+   "fim": 18.72
+  },
+  {
+   "id": "N6",
+   "texto": "Se está, o pontua é pra você: cartão no celular, sem aplicativo, avisos no WhatsApp.",
+   "ini": 19.12,
+   "fim": 25.72
+  },
+  {
+   "id": "N7",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 25.92,
+   "fim": 29.76
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Seu negócio está nessa lista?",
+   "ini": 0.0,
+   "fim": 1.76
+  },
+  {
+   "fala": "N2",
+   "texto": "Cafeteria e padaria: o décimo café é por conta da casa.",
+   "ini": 2.32,
+   "fim": 6.96
+  },
+  {
+   "fala": "N3",
+   "texto": "Salão e barbearia: o corte que completa o cartão.",
+   "ini": 7.2,
+   "fim": 10.96
+  },
+  {
+   "fala": "N4",
+   "texto": "Pet shop: o banho que vira prêmio.",
+   "ini": 11.28,
+   "fim": 14.0
+  },
+  {
+   "fala": "N5",
+   "texto": "Açaí, sorveteria e lanchonete: o cliente volta pra completar.",
+   "ini": 14.32,
+   "fim": 18.72
+  },
+  {
+   "fala": "N6",
+   "texto": "Se está, o pontúa é pra você: cartão no celular, sem aplicativo, avisos no WhatsApp.",
+   "ini": 19.12,
+   "fim": 25.72
+  },
+  {
+   "fala": "N7",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 25.92,
+   "fim": 28.72
+  },
+  {
+   "fala": "N7",
+   "texto": "Link na bio.",
+   "ini": 28.84,
+   "fim": 29.76
+  }
+ ]
+}
