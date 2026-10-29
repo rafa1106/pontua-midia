@@ -11,8 +11,9 @@ from reel_base import *
 
 WW = 1000                 # largura da janela do navegador
 VH0 = round(WW * 900 / 1440)  # altura da imagem da tela (16:10) na largura da janela
-VH = 820                  # altura visível (recorte mais alto; zoom mínimo ~1.32)
-WT = 540                  # topo da janela
+VH = VH0                  # tela inteira, sem recorte (nada cortado nas laterais)
+WT = 520                  # topo da janela
+LW, LH = 920, 330         # lupa
 
 
 def build(work):
@@ -35,11 +36,12 @@ def build(work):
   <div class="bar"><i></i><i></i><i></i><span class="url">🔒 pontua.club</span></div>
   <div class="vp"><img id="sv" src="{fl}/0001.jpg"></div>
 </div>
+<div id="lens"><img id="sl" src="{fl}/0001.jpg"><div id="ltag">cria a conta</div></div>
 <div id="timer"><span class="ic">⏱</span><b id="tt">0:00</b><span class="lb">tempo real da gravação</span></div>
 
-<div class="chip" id="rule" style="left:0;right:0;margin:auto;width:max-content;top:1590px">a cada 10 cafés, 1 grátis ☕</div>
-<div class="badge" id="ativa" style="left:0;right:0;margin:auto;width:max-content;top:1590px">✓ Campanha ativa</div>
-<div class="badge" id="qrok" style="left:0;right:0;margin:auto;width:max-content;top:1590px">✓ QR Code e link prontos</div>
+<div class="chip" id="rule" style="left:0;right:0;margin:auto;width:max-content;top:1610px">a cada 10 cafés, 1 grátis ☕</div>
+<div class="badge" id="ativa" style="left:0;right:0;margin:auto;width:max-content;top:1610px">✓ Campanha ativa</div>
+<div class="badge" id="qrok" style="left:0;right:0;margin:auto;width:max-content;top:1610px">✓ QR Code e link prontos</div>
 {CTA}"""
     css = f"""
 #hook{{top:640px}} #hook2{{top:290px}}
@@ -51,18 +53,24 @@ def build(work):
   display:flex;align-items:center;padding-left:18px}}
 #win .vp{{position:relative;width:{WW}px;height:{VH}px;overflow:hidden}}
 #win .vp img{{position:absolute;left:0;top:0;width:{WW}px;height:{VH0}px;transform-origin:0 0}}
-#timer{{position:absolute;left:0;right:0;top:{WT + 58 + VH + 36}px;margin:auto;width:max-content;display:flex;align-items:center;gap:18px;
+#lens{{position:absolute;left:0;right:0;margin:auto;top:{WT + 58 + VH + 40}px;width:{LW}px;height:{LH}px;border-radius:30px;overflow:hidden;background:#0F1220;opacity:0;
+  border:4px solid {C['amber']};box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(255,194,77,.45);transform-origin:50% 0}}
+#lens img{{position:absolute;left:0;top:0;transform-origin:0 0}}
+#ltag{{position:absolute;left:20px;top:16px;padding:10px 22px;border-radius:999px;background:rgba(13,10,24,.85);border:1.5px solid rgba(183,156,255,.45);
+  font-size:26px;font-weight:900;color:{C['amber']};text-transform:uppercase;letter-spacing:.12em}}
+#timer{{position:absolute;left:0;right:0;top:{WT - 100}px;margin:auto;width:max-content;display:flex;align-items:center;gap:18px;
   padding:18px 32px;border-radius:999px;background:rgba(255,255,255,.07);border:1.5px solid rgba(183,156,255,.3);opacity:0}}
 #timer .ic{{font-size:38px}} #timer b{{font-size:52px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums;min-width:120px}}
 #timer .lb{{font-size:28px;color:{C['muted']};font-weight:600}}
 """
     js = f"""
 const S={json.dumps(S)}, U={json.dumps(U)}, T={total:.3f}, FL="{fl}", NFL={nfl}, VW={WW}, VH={VH}, VH0={VH0};
-// foco (centro normalizado x,y e zoom) por tempo de vídeo
-const FOCO=[[0,[.5,.5,1.8]],[33,[.5,.5,1.8]],[36,[.6,.46,1.4]],[91,[.6,.46,1.4]],[94,[.3,.36,1.65]],[101,[.3,.36,1.65]],
-            [104,[.42,.45,1.6]],[110,[.43,.6,1.95]],[116,[.43,.6,1.95]]];
-function foco(vt){{ let i=1; while(i<FOCO.length-1 && vt>FOCO[i][0]) i++;
-  const [a,fa]=FOCO[i-1],[b,fb]=FOCO[i]; const k=ease((vt-a)/Math.max(.01,b-a));
+const LW={LW}, LH={LH};
+// lupa: [vt, [x,y,zoom]] (tempo da gravação)
+const LUPA=[[0,[.5,.42,1.5]],[56,[.5,.42,1.5]],[58.5,[.66,.4,1.35]],[92,[.66,.4,1.35]],[93,[.5,.68,1.6]],[95.0,[.5,.68,1.6]],[95.4,[.4,.2,1.6]],
+            [99.9,[.4,.2,1.6]],[100.8,[.35,.72,1.6]],[111,[.35,.72,1.6]],[112.2,[.45,.7,1.5]],[116,[.45,.7,1.5]]];
+function lupa(vt){{ let i=1; while(i<LUPA.length-1 && vt>LUPA[i][0]) i++;
+  const [a,fa]=LUPA[i-1],[b,fb]=LUPA[i]; const k=ease((vt-a)/Math.max(.01,b-a));
   return [0,1,2].map(j=>fa[j]+(fb[j]-fa[j])*k); }}
 window.R=async function(t){{
   const [n1a,n1b]=S.N1,[n2a,n2b]=S.N2,[n3a,n3b]=S.N3,[n4a,n4b]=S.N4,[n5a,n5b]=S.N5,[n6a,n6b]=S.N6;
@@ -79,12 +87,17 @@ window.R=async function(t){{
   $('top').style.opacity=1-ck;
   $('timer').style.opacity=cl((t-n2a)/.3)*(1-ck);
   // tempo de vídeo (real da gravação) por trecho de narração
-  const vt=pw([[0,1.9],[n2a,1.9],[n3a-.05,58],[n4a-.05,92],[n5a-.05,102],[n5b,113],[T,113]],t);
+  const ta=n4a-.05+.3*(n5a-n4a);   // corte seco: pula o carregamento (spinner) entre o foguete e a página da campanha
+  const vt=pw([[0,1.9],[n2a,1.9],[n3a-.05,58],[n4a-.05,92],[ta,95.0],[ta+.01,95.45],[n5a-.05,102],[n5b,113],[T,113]],t);
   const fr=Math.min(NFL,Math.max(1,Math.round(vt*30)+1));
   setImg($('sv'),`${{FL}}/${{pad(fr)}}.jpg`,ps);
-  const [fx,fy,z]=foco(vt);
-  const tx=cl(VW/2-fx*VW*z, VW-VW*z, 0), ty=cl(VH/2-fy*VH0*z, VH-VH0*z, 0);
-  $('sv').style.transform=`translate(${{tx}}px,${{ty}}px) scale(${{z}})`;
+  setImg($('sl'),$('sv').src,ps);
+  const [lx,ly,lz]=lupa(vt), lw=VW*lz, lh=VH0*lz;
+  $('sl').style.width=lw+'px'; $('sl').style.height=lh+'px';
+  $('sl').style.transform=`translate(${{cl(LW/2-lx*lw,LW-lw,0)}}px,${{cl(LH/2-ly*lh,LH-lh,0)}}px)`;
+  $('ltag').textContent = vt<58 ? 'cria a conta' : vt<92.5 ? 'a regra' : vt<95.2 ? 'ativar' : vt<100 ? 'campanha ativa' : vt<111.6 ? 'nome e link' : 'QR Code';
+  const lin=back((t-(n2a+.3))/.5);
+  $('lens').style.opacity=cl((t-(n2a+.3))/.15)*(1-ck); $('lens').style.transform=`scale(${{.85+.15*lin}})`;
   const sec=Math.round(Math.max(0,vt-1.9)); $('tt').textContent=`${{Math.floor(sec/60)}}:${{String(sec%60).padStart(2,'0')}}`;
   const fim=cl(1-Math.abs(t-(n5b-.4))/.6); $('tt').style.color=fim>0?`rgb(255,${{194+61*(1-fim)}},${{77+178*(1-fim)}})`:'#fff';
   // legendas
