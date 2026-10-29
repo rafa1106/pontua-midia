@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Barbearia: dez cortes, um grátis. Sem papel.",
+   "ini": 0.0,
+   "fim": 4.08
+  },
+  {
+   "id": "N2",
+   "texto": "Seu cliente vem acertar o corte todo mês, e o carimbo vai direto pro celular dele.",
+   "ini": 4.56,
+   "fim": 10.08
+  },
+  {
+   "id": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 10.32,
+   "fim": 14.92
+  },
+  {
+   "id": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 15.12,
+   "fim": 21.92
+  },
+  {
+   "id": "N5",
+   "texto": "E o décimo corte é por conta da casa.",
+   "ini": 22.08,
+   "fim": 24.68
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 24.88,
+   "fim": 28.88
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Barbearia: dez cortes, um grátis.",
+   "ini": 0.0,
+   "fim": 3.2
+  },
+  {
+   "fala": "N1",
+   "texto": "Sem papel.",
+   "ini": 3.36,
+   "fim": 4.08
+  },
+  {
+   "fala": "N2",
+   "texto": "Seu cliente vem acertar o corte todo mês, e o carimbo vai direto pro celular dele.",
+   "ini": 4.56,
+   "fim": 10.08
+  },
+  {
+   "fala": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 10.32,
+   "fim": 14.92
+  },
+  {
+   "fala": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 15.12,
+   "fim": 21.92
+  },
+  {
+   "fala": "N5",
+   "texto": "E o décimo corte é por conta da casa.",
+   "ini": 22.08,
+   "fim": 24.68
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 24.88,
+   "fim": 27.84
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 27.96,
+   "fim": 28.88
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Açaí: dez copos, um grátis. Sem papel.",
+   "ini": 0.0,
+   "fim": 3.96
+  },
+  {
+   "id": "N2",
+   "texto": "Seu cliente passa pra tomar o açaí de sempre, e o carimbo vai direto pro celular dele.",
+   "ini": 4.24,
+   "fim": 9.68
+  },
+  {
+   "id": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 9.92,
+   "fim": 14.72
+  },
+  {
+   "id": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.96,
+   "fim": 22.0
+  },
+  {
+   "id": "N5",
+   "texto": "E o décimo açaí é por conta da casa.",
+   "ini": 22.04,
+   "fim": 24.32
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 24.72,
+   "fim": 28.56
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Açaí: dez copos, um grátis.",
+   "ini": 0.0,
+   "fim": 2.88
+  },
+  {
+   "fala": "N1",
+   "texto": "Sem papel.",
+   "ini": 3.04,
+   "fim": 3.96
+  },
+  {
+   "fala": "N2",
+   "texto": "Seu cliente passa pra tomar o açaí de sempre, e o carimbo vai direto pro celular dele.",
+   "ini": 4.24,
+   "fim": 9.68
+  },
+  {
+   "fala": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 9.92,
+   "fim": 14.72
+  },
+  {
+   "fala": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.96,
+   "fim": 22.0
+  },
+  {
+   "fala": "N5",
+   "texto": "E o décimo açaí é por conta da casa.",
+   "ini": 22.04,
+   "fim": 24.32
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 24.72,
+   "fim": 27.52
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 27.64,
+   "fim": 28.56
+  }
+ ]
+}

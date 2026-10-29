@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Lava-rápido: dez lavagens, uma grátis. Sem papel.",
+   "ini": 0.0,
+   "fim": 4.16
+  },
+  {
+   "id": "N2",
+   "texto": "Seu cliente traz o carro pra lavar, e o carimbo vai direto pro celular dele.",
+   "ini": 4.56,
+   "fim": 9.28
+  },
+  {
+   "id": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 9.36,
+   "fim": 14.08
+  },
+  {
+   "id": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.12,
+   "fim": 20.72
+  },
+  {
+   "id": "N5",
+   "texto": "E a décima lavagem é por conta da casa.",
+   "ini": 20.76,
+   "fim": 23.6
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 23.68,
+   "fim": 27.44
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Lava-rápido: dez lavagens, uma grátis.",
+   "ini": 0.0,
+   "fim": 3.28
+  },
+  {
+   "fala": "N1",
+   "texto": "Sem papel.",
+   "ini": 3.44,
+   "fim": 4.16
+  },
+  {
+   "fala": "N2",
+   "texto": "Seu cliente traz o carro pra lavar, e o carimbo vai direto pro celular dele.",
+   "ini": 4.56,
+   "fim": 9.28
+  },
+  {
+   "fala": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 9.36,
+   "fim": 14.08
+  },
+  {
+   "fala": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.12,
+   "fim": 20.72
+  },
+  {
+   "fala": "N5",
+   "texto": "E a décima lavagem é por conta da casa.",
+   "ini": 20.76,
+   "fim": 23.6
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 23.68,
+   "fim": 26.48
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 26.6,
+   "fim": 27.44
+  }
+ ]
+}

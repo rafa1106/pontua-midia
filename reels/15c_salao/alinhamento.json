@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Salão de beleza: dez visitas, uma escova grátis. Sem papel.",
+   "ini": 0.0,
+   "fim": 5.04
+  },
+  {
+   "id": "N2",
+   "texto": "Sua cliente vem fazer a escova ou a unha, e o carimbo vai direto pro celular dela.",
+   "ini": 5.28,
+   "fim": 10.72
+  },
+  {
+   "id": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 10.96,
+   "fim": 15.44
+  },
+  {
+   "id": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 15.84,
+   "fim": 22.92
+  },
+  {
+   "id": "N5",
+   "texto": "E na décima visita, a escova é por conta da casa.",
+   "ini": 23.12,
+   "fim": 26.56
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 27.04,
+   "fim": 30.88
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Salão de beleza: dez visitas, uma escova grátis.",
+   "ini": 0.0,
+   "fim": 3.96
+  },
+  {
+   "fala": "N1",
+   "texto": "Sem papel.",
+   "ini": 4.16,
+   "fim": 5.04
+  },
+  {
+   "fala": "N2",
+   "texto": "Sua cliente vem fazer a escova ou a unha, e o carimbo vai direto pro celular dela.",
+   "ini": 5.28,
+   "fim": 10.72
+  },
+  {
+   "fala": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 10.96,
+   "fim": 15.44
+  },
+  {
+   "fala": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 15.84,
+   "fim": 22.92
+  },
+  {
+   "fala": "N5",
+   "texto": "E na décima visita, a escova é por conta da casa.",
+   "ini": 23.12,
+   "fim": 26.56
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 27.04,
+   "fim": 29.92
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 30.0,
+   "fim": 30.88
+  }
+ ]
+}

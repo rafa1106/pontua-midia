@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Hamburgueria: dez lanches, um grátis. Sem papel.",
+   "ini": 0.0,
+   "fim": 4.28
+  },
+  {
+   "id": "N2",
+   "texto": "Seu cliente vem comer o lanche de sempre, e o carimbo vai direto pro celular dele.",
+   "ini": 4.56,
+   "fim": 9.6
+  },
+  {
+   "id": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 9.84,
+   "fim": 14.56
+  },
+  {
+   "id": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.8,
+   "fim": 21.48
+  },
+  {
+   "id": "N5",
+   "texto": "E o décimo lanche é por conta da casa.",
+   "ini": 21.68,
+   "fim": 24.32
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 24.56,
+   "fim": 28.48
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Hamburgueria: dez lanches, um grátis.",
+   "ini": 0.0,
+   "fim": 3.2
+  },
+  {
+   "fala": "N1",
+   "texto": "Sem papel.",
+   "ini": 3.36,
+   "fim": 4.28
+  },
+  {
+   "fala": "N2",
+   "texto": "Seu cliente vem comer o lanche de sempre, e o carimbo vai direto pro celular dele.",
+   "ini": 4.56,
+   "fim": 9.6
+  },
+  {
+   "fala": "N3",
+   "texto": "Sem cartão pra perder, sem carimbo de borracha, sem aplicativo pra baixar.",
+   "ini": 9.84,
+   "fim": 14.56
+  },
+  {
+   "fala": "N4",
+   "texto": "A cada visita, chega o aviso no WhatsApp: faltam três, faltam dois, até o cartão completo.",
+   "ini": 14.8,
+   "fim": 21.48
+  },
+  {
+   "fala": "N5",
+   "texto": "E o décimo lanche é por conta da casa.",
+   "ini": 21.68,
+   "fim": 24.32
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 24.56,
+   "fim": 27.36
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 27.44,
+   "fim": 28.48
+  }
+ ]
+}
