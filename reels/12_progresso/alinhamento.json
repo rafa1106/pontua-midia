@@ -1,0 +1,102 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Dois carimbos de presente quase dobram quem completa o cartão.",
+   "ini": 0.0,
+   "fim": 3.92
+  },
+  {
+   "id": "N2",
+   "texto": "Num estudo com clientes de um lava-rápido, um grupo recebeu um cartão de oito carimbos, vazio.",
+   "ini": 4.24,
+   "fim": 10.36
+  },
+  {
+   "id": "N3",
+   "texto": "O outro, um cartão de dez, com dois carimbos já dados.",
+   "ini": 10.64,
+   "fim": 14.64
+  },
+  {
+   "id": "N4",
+   "texto": "O esforço era o mesmo. Mas trinta e quatro por cento completaram o cartão com presente, contra dezenove por cento do cartão vazio.",
+   "ini": 15.12,
+   "fim": 24.0
+  },
+  {
+   "id": "N5",
+   "texto": "Quem já começa na frente quer terminar.",
+   "ini": 24.24,
+   "fim": 26.88
+  },
+  {
+   "id": "N6",
+   "texto": "No pontua, você dá o carimbo de presente já no primeiro atendimento, e o cliente recebe os avisos no WhatsApp.",
+   "ini": 27.36,
+   "fim": 34.16
+  },
+  {
+   "id": "N7",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 34.56,
+   "fim": 38.32
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Dois carimbos de presente quase dobram quem completa o cartão.",
+   "ini": 0.0,
+   "fim": 3.92
+  },
+  {
+   "fala": "N2",
+   "texto": "Num estudo com clientes de um lava-rápido, um grupo recebeu um cartão de oito carimbos, vazio.",
+   "ini": 4.24,
+   "fim": 10.36
+  },
+  {
+   "fala": "N3",
+   "texto": "O outro, um cartão de dez, com dois carimbos já dados.",
+   "ini": 10.64,
+   "fim": 14.64
+  },
+  {
+   "fala": "N4",
+   "texto": "O esforço era o mesmo.",
+   "ini": 15.12,
+   "fim": 16.88
+  },
+  {
+   "fala": "N4",
+   "texto": "Mas trinta e quatro por cento completaram o cartão com presente, contra dezenove por cento do cartão vazio.",
+   "ini": 17.12,
+   "fim": 24.0
+  },
+  {
+   "fala": "N5",
+   "texto": "Quem já começa na frente quer terminar.",
+   "ini": 24.24,
+   "fim": 26.88
+  },
+  {
+   "fala": "N6",
+   "texto": "No pontúa, você dá o carimbo de presente já no primeiro atendimento, e o cliente recebe os avisos no WhatsApp.",
+   "ini": 27.36,
+   "fim": 34.16
+  },
+  {
+   "fala": "N7",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 34.56,
+   "fim": 37.28
+  },
+  {
+   "fala": "N7",
+   "texto": "Link na bio.",
+   "ini": 37.4,
+   "fim": 38.32
+  }
+ ]
+}
