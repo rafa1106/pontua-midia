@@ -125,8 +125,8 @@ window.R=async function(t){{
   // legendas
   const h=ease((t-.05)/.4); $('hook').style.opacity=h*(1-cl((t-(n2a-.2))/.2)); $('hook').style.transform=`translateY(${{(1-h)*40}}px)`;
   show('t1',t,n2a,q2+.02); show('t2',t,q2,q3+.02); show('t3',t,q3,n3a+.05);
-  show('c3a',t,n3a,r2); show('c3b',t,r2,n4a-.05);
-  show('c4',t,n4a-.3,n5a-.1);
+  show('c3a',t,n3a,r2); show('c3b',t,r2,n4a-.28);
+  show('c4',t,n4a-.22,n5a-.1);
   // cartão de papel perdendo os carimbos (N3)
   const ci=back((t-(n3a+.05))/.5), co=cl((t-(n4a-.45))/.35);
   const tilt = ease((t-(r2+.6))/.8);
