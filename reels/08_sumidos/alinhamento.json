@@ -4,36 +4,36 @@
    "id": "N1",
    "texto": "Cliente sumiu? O pontua percebe, e já monta o convite pra ele voltar.",
    "ini": 0.0,
-   "fim": 5.04
+   "fim": 5.0
   },
   {
    "id": "N2",
    "texto": "O painel mostra quantos clientes não aparecem há mais de trinta dias.",
-   "ini": 5.28,
-   "fim": 9.68
+   "ini": 5.2,
+   "fim": 9.88
   },
   {
    "id": "N3",
-   "texto": "Com um clique, vem tudo pronto: quem recebe, o texto, e um carimbo de presente pra quem voltar.",
-   "ini": 10.0,
-   "fim": 16.32
+   "texto": "Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.",
+   "ini": 10.08,
+   "fim": 16.4
   },
   {
    "id": "N4",
    "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
    "ini": 16.72,
-   "fim": 20.88
+   "fim": 21.2
   },
   {
    "id": "N5",
    "texto": "O convite sai por SMS e e-mail. A partir do plano Basic.",
-   "ini": 21.28,
+   "ini": 21.227,
    "fim": 25.84
   },
   {
    "id": "N6",
    "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 26.0,
+   "ini": 25.893,
    "fim": 28.24
   }
  ],
@@ -42,54 +42,54 @@
    "fala": "N1",
    "texto": "Cliente sumiu?",
    "ini": 0.0,
-   "fim": 1.04
+   "fim": 0.96
   },
   {
    "fala": "N1",
    "texto": "O pontua percebe, e já monta o convite pra ele voltar.",
-   "ini": 1.44,
-   "fim": 5.04
+   "ini": 1.2,
+   "fim": 5.0
   },
   {
    "fala": "N2",
    "texto": "O painel mostra quantos clientes não aparecem há mais de trinta dias.",
-   "ini": 5.28,
-   "fim": 9.68
+   "ini": 5.2,
+   "fim": 9.88
   },
   {
    "fala": "N3",
-   "texto": "Com um clique, vem tudo pronto: quem recebe, o texto, e um carimbo de presente pra quem voltar.",
-   "ini": 10.0,
-   "fim": 16.32
+   "texto": "Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.",
+   "ini": 10.08,
+   "fim": 16.4
   },
   {
    "fala": "N4",
    "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
    "ini": 16.72,
-   "fim": 20.88
+   "fim": 21.2
   },
   {
    "fala": "N5",
    "texto": "O convite sai por SMS e e-mail.",
-   "ini": 21.28,
+   "ini": 21.227,
    "fim": 24.08
   },
   {
    "fala": "N5",
    "texto": "A partir do plano Basic.",
-   "ini": 24.24,
+   "ini": 24.12,
    "fim": 25.84
   },
   {
    "fala": "N6",
    "texto": "Crie o seu grátis.",
-   "ini": 26.0,
-   "fim": 27.16
+   "ini": 25.893,
+   "fim": 27.2
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 27.28,
+   "ini": 27.32,
    "fim": 28.24
   }
  ]
