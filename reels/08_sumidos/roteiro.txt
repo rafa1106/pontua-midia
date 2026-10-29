@@ -2,7 +2,7 @@ Cliente sumiu? O pontua percebe, e já monta o convite pra ele voltar.
 
 O painel mostra quantos clientes não aparecem há mais de trinta dias.
 
-Com um clique, vem tudo pronto: quem recebe, o texto, e um carimbo de presente pra quem voltar.
+Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.
 
 Você ajusta o que quiser, confere o resumo e o custo, e envia.
 
