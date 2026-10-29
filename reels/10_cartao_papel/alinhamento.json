@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Onde foi parar o cartão de papel do seu cliente?",
+   "ini": 0.0,
+   "fim": 2.56
+  },
+  {
+   "id": "N2",
+   "texto": "No bolso da calça que foi pra máquina. No fundo da gaveta. No lixo, sem querer.",
+   "ini": 2.96,
+   "fim": 8.16
+  },
+  {
+   "id": "N3",
+   "texto": "E com ele foram os carimbos. O cliente recomeça do zero, ou desiste.",
+   "ini": 8.48,
+   "fim": 13.52
+  },
+  {
+   "id": "N4",
+   "texto": "No pontua, o cartão fica no celular do cliente, e os avisos chegam no WhatsApp.",
+   "ini": 14.0,
+   "fim": 19.08
+  },
+  {
+   "id": "N5",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 19.28,
+   "fim": 23.12
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Onde foi parar o cartão de papel do seu cliente?",
+   "ini": 0.0,
+   "fim": 2.56
+  },
+  {
+   "fala": "N2",
+   "texto": "No bolso da calça que foi pra máquina.",
+   "ini": 2.96,
+   "fim": 4.96
+  },
+  {
+   "fala": "N2",
+   "texto": "No fundo da gaveta.",
+   "ini": 5.28,
+   "fim": 6.64
+  },
+  {
+   "fala": "N2",
+   "texto": "No lixo, sem querer.",
+   "ini": 6.8,
+   "fim": 8.16
+  },
+  {
+   "fala": "N3",
+   "texto": "E com ele foram os carimbos.",
+   "ini": 8.48,
+   "fim": 10.32
+  },
+  {
+   "fala": "N3",
+   "texto": "O cliente recomeça do zero, ou desiste.",
+   "ini": 10.64,
+   "fim": 13.52
+  },
+  {
+   "fala": "N4",
+   "texto": "No pontua, o cartão fica no celular do cliente, e os avisos chegam no WhatsApp.",
+   "ini": 14.0,
+   "fim": 19.08
+  },
+  {
+   "fala": "N5",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 19.28,
+   "fim": 21.92
+  },
+  {
+   "fala": "N5",
+   "texto": "Link na bio.",
+   "ini": 22.08,
+   "fim": 23.12
+  }
+ ]
+}
