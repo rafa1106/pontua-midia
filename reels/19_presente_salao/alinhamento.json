@@ -1,0 +1,90 @@
+{
+ "falas": [
+  {
+   "id": "N1",
+   "texto": "Salão e barbearia: e se o primeiro carimbo fosse um presente?",
+   "ini": 0.0,
+   "fim": 4.32
+  },
+  {
+   "id": "N2",
+   "texto": "Seu cliente entra no clube e já ganha o carimbo de boas-vindas.",
+   "ini": 4.8,
+   "fim": 8.84
+  },
+  {
+   "id": "N3",
+   "texto": "Não é desconto, é gentileza. E quem ganha um presente tende a retribuir.",
+   "ini": 9.04,
+   "fim": 14.52
+  },
+  {
+   "id": "N4",
+   "texto": "Ele já sai com um carimbo, recebe no WhatsApp quanto falta, e volta pra completar.",
+   "ini": 14.8,
+   "fim": 19.76
+  },
+  {
+   "id": "N5",
+   "texto": "Até o décimo corte, que é por conta da casa.",
+   "ini": 20.16,
+   "fim": 22.88
+  },
+  {
+   "id": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito. Link na bio.",
+   "ini": 23.44,
+   "fim": 27.36
+  }
+ ],
+ "frases": [
+  {
+   "fala": "N1",
+   "texto": "Salão e barbearia: e se o primeiro carimbo fosse um presente?",
+   "ini": 0.0,
+   "fim": 4.32
+  },
+  {
+   "fala": "N2",
+   "texto": "Seu cliente entra no clube e já ganha o carimbo de boas-vindas.",
+   "ini": 4.8,
+   "fim": 8.84
+  },
+  {
+   "fala": "N3",
+   "texto": "Não é desconto, é gentileza.",
+   "ini": 9.04,
+   "fim": 11.44
+  },
+  {
+   "fala": "N3",
+   "texto": "E quem ganha um presente tende a retribuir.",
+   "ini": 11.84,
+   "fim": 14.52
+  },
+  {
+   "fala": "N4",
+   "texto": "Ele já sai com um carimbo, recebe no WhatsApp quanto falta, e volta pra completar.",
+   "ini": 14.8,
+   "fim": 19.76
+  },
+  {
+   "fala": "N5",
+   "texto": "Até o décimo corte, que é por conta da casa.",
+   "ini": 20.16,
+   "fim": 22.88
+  },
+  {
+   "fala": "N6",
+   "texto": "Crie o seu grátis, sem cartão de crédito.",
+   "ini": 23.44,
+   "fim": 26.16
+  },
+  {
+   "fala": "N6",
+   "texto": "Link na bio.",
+   "ini": 26.32,
+   "fim": 27.36
+  }
+ ]
+}
