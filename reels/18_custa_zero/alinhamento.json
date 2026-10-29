@@ -4,37 +4,37 @@
    "id": "N1",
    "texto": "Quanto custa começar um programa de fidelidade? Zero.",
    "ini": 0.0,
-   "fim": 3.64
+   "fim": 3.72
   },
   {
    "id": "N2",
    "texto": "De graça, seu cliente já ganha o cartão de carimbos no celular.",
-   "ini": 3.84,
+   "ini": 3.92,
    "fim": 7.76
   },
   {
    "id": "N3",
    "texto": "Ele entra pelo QR Code do balcão, sem baixar aplicativo.",
-   "ini": 8.08,
-   "fim": 11.68
+   "ini": 8.16,
+   "fim": 11.84
   },
   {
    "id": "N4",
    "texto": "E recebe os avisos pelo WhatsApp, que ele já usa todo dia.",
-   "ini": 12.0,
-   "fim": 15.6
+   "ini": 12.16,
+   "fim": 15.52
   },
   {
    "id": "N5",
-   "texto": "Sem cartão de crédito, sem fatura, e no ar no mesmo dia.",
-   "ini": 15.84,
-   "fim": 19.96
+   "texto": "Não pede cartão de crédito, e fica no ar no mesmo dia.",
+   "ini": 15.92,
+   "fim": 19.44
   },
   {
    "id": "N6",
    "texto": "Começar não custa nada. Crie o seu grátis. Link na bio.",
-   "ini": 20.16,
-   "fim": 24.32
+   "ini": 19.84,
+   "fim": 24.08
   }
  ],
  "frases": [
@@ -42,55 +42,55 @@
    "fala": "N1",
    "texto": "Quanto custa começar um programa de fidelidade?",
    "ini": 0.0,
-   "fim": 2.48
+   "fim": 2.56
   },
   {
    "fala": "N1",
    "texto": "Zero.",
-   "ini": 2.96,
-   "fim": 3.64
+   "ini": 3.12,
+   "fim": 3.72
   },
   {
    "fala": "N2",
    "texto": "De graça, seu cliente já ganha o cartão de carimbos no celular.",
-   "ini": 3.84,
+   "ini": 3.92,
    "fim": 7.76
   },
   {
    "fala": "N3",
    "texto": "Ele entra pelo QR Code do balcão, sem baixar aplicativo.",
-   "ini": 8.08,
-   "fim": 11.68
+   "ini": 8.16,
+   "fim": 11.84
   },
   {
    "fala": "N4",
    "texto": "E recebe os avisos pelo WhatsApp, que ele já usa todo dia.",
-   "ini": 12.0,
-   "fim": 15.6
+   "ini": 12.16,
+   "fim": 15.52
   },
   {
    "fala": "N5",
-   "texto": "Sem cartão de crédito, sem fatura, e no ar no mesmo dia.",
-   "ini": 15.84,
-   "fim": 19.96
+   "texto": "Não pede cartão de crédito, e fica no ar no mesmo dia.",
+   "ini": 15.92,
+   "fim": 19.44
   },
   {
    "fala": "N6",
    "texto": "Começar não custa nada.",
-   "ini": 20.16,
-   "fim": 21.84
+   "ini": 19.84,
+   "fim": 21.52
   },
   {
    "fala": "N6",
    "texto": "Crie o seu grátis.",
-   "ini": 22.16,
-   "fim": 23.24
+   "ini": 21.84,
+   "fim": 22.96
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 23.36,
-   "fim": 24.32
+   "ini": 23.12,
+   "fim": 24.08
   }
  ]
 }
