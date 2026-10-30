@@ -1,4 +1,4 @@
-# Automação do Instagram @pontua.club — como funciona (v4 · 26/10/2026)
+# Automação do Instagram @pontua.club — como funciona (v5 · 30/10/2026: Reels)
 
 Tudo roda na nuvem. **Não depende do PC do Rafael.**
 
@@ -15,10 +15,12 @@ Rotina do Claude (seg e qui 07:41 SP)          GitHub Action "renderizar fila"  
 | Ponte | Make · cenário 6780455 "pontua · ponte GitHub" (webhook) | `acao=pendentes` devolve o próximo post a renderizar · `acao=pronto` muda para `agendado` · `acao=falhou` marca `erro_render`. |
 | Renderização/hospedagem | `.github/workflows/renderizar.yml` + `automacao/render_fila.py` (todo dia 06:17 SP e seg/qui 08:37, 10:37, 14:37 SP) | Renderiza com o mesmo código, commita `artes/`, `gerador/` e `fontes/inventario.json`, espera as URLs `raw.githubusercontent.com` responderem 200 e avisa a ponte. Usa o token da própria Action (não expira, sem segredo). |
 | Fila | Make · data store `pontua_fila_instagram` (154610) | `renderizar → agendado → publicado`, ou `erro_render` / `erro` / `pausado` / `removido`. `_rotina_log` = log da última execução da rotina. |
-| Publicador | Make · cenário 6350969 (a cada 30 min, 08h–19h SP) | Publica o `agendado` com `quando` vencido; marca `publicado` ou `erro`. |
+| Publicador | Make · cenário 6350969 (a cada 30 min, 08h–13h SP) | Publica o `agendado` com `quando` vencido; marca `publicado` ou `erro`. Três rotas pelo campo `tipo`: `carrossel`, `imagem` e `reel` (módulo *Create a reel post*, `share_to_feed` ligado, capa = quadro `capa_ms`). |
+| Vídeos dos Reels | Branch órfã `reels` deste repo | Cópias de publicação `reel_NN.mp4` (H.264 ≤4,5 Mbps, GOP fechado, AAC 128k 48 kHz, faststart) em `https://raw.githubusercontent.com/rafa1106/pontua-midia/reels/reel_NN.mp4`. Branch separada para o `main` continuar leve: `clone --depth 1` e o checkout da Action não baixam os vídeos. |
 
 ## Calendário
-Ter (ramo) · Qui (educação) · Sáb (produto/"No automático") às **09:00 SP = 12:00Z**. Regras de conteúdo: `estrategia/guia_conteudo.md`.
+Posts: Ter (ramo) · Qui (educação) · Sáb (produto/"No automático") às **09:00 SP = 12:00Z**.
+Reels: **seg/qua/sex às 11:30 SP = 14:30Z**, keys `rMMDD_*`. Os 25 Reels prontos (pasta `05_reels_finais` do Rafael) estão agendados de 02/11 a 30/12/2026; legendas em `legendas/reels-20261030.json`. A rotina de conteúdo não cria nem mexe em reels, só reporta erro. Regras de conteúdo: `estrategia/guia_conteudo.md`.
 Com 15 dias de folga, 2 execuções da rotina por semana e 13 tentativas semanais da Action, várias falhas seguidas ainda não param o feed.
 
 ## Arquivos
@@ -29,7 +31,8 @@ Com 15 dias de folga, 2 execuções da rotina por semana e 13 tentativas semanai
 ## Manutenção que já está coberta
 - GitHub desativa workflows agendados de repositórios públicos após 60 dias sem atividade; cada post renderizado é um commit, então isso não acontece enquanto a rotina estiver ativa.
 - O runner está fixo em `ubuntu-24.04` para a renderização não mudar sozinha.
-- Consumo do Make (plano Free, 1.000 operações/mês): publicador ~340/mês (08h–13h) + ponte ~200/mês.
+- Consumo do Make (plano Free, 1.000 operações/mês): publicador ~340/mês (08h–13h) + ponte ~200/mês + reels ~40/mês. O plano Free permite só 2 cenários: por isso os Reels usam o mesmo publicador.
+- Rótulo de IA: o módulo do Make não tem o campo `is_ai_generated` da API. Os Reels com cenas de IA (10–19) trazem na legenda "Cenas ilustrativas criadas com IA."
 
 ## O que só o Rafael pode fazer
 - **Renovar a conexão do Instagram no Make a cada ~60 dias** (regra da Meta): make.com → Connections → `pontua-instagram` → Reauthorize. Vence em **20/11/2026**; a rotina avisa por e-mail/push 15 dias antes.
