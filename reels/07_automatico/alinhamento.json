@@ -4,37 +4,37 @@
    "id": "N1",
    "texto": "Cliente some e você nem percebe? Deixa o pontua avisar por você.",
    "ini": 0.0,
-   "fim": 4.96
+   "fim": 4.72
   },
   {
    "id": "N2",
    "texto": "Os avisos chegam no WhatsApp do cliente. E, se quiser, também por SMS ou e-mail.",
-   "ini": 5.2,
-   "fim": 11.4
+   "ini": 4.96,
+   "fim": 11.08
   },
   {
    "id": "N3",
    "texto": "E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.",
-   "ini": 11.6,
-   "fim": 18.6
+   "ini": 11.28,
+   "fim": 18.12
   },
   {
    "id": "N4",
    "texto": "Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.",
-   "ini": 18.8,
-   "fim": 23.0
+   "ini": 18.32,
+   "fim": 22.32
   },
   {
    "id": "N5",
    "texto": "Sem você precisar lembrar de nada.",
-   "ini": 23.2,
-   "fim": 25.48
+   "ini": 22.72,
+   "fim": 25.0
   },
   {
    "id": "N6",
    "texto": "Comece agora. Link na bio.",
-   "ini": 25.68,
-   "fim": 27.92
+   "ini": 25.2,
+   "fim": 27.44
   }
  ],
  "frases": [
@@ -42,55 +42,55 @@
    "fala": "N1",
    "texto": "Cliente some e você nem percebe?",
    "ini": 0.0,
-   "fim": 2.64
+   "fim": 2.56
   },
   {
    "fala": "N1",
-   "texto": "Deixa o pontua avisar por você.",
-   "ini": 2.88,
-   "fim": 4.96
+   "texto": "Deixa o pontúa avisar por você.",
+   "ini": 2.8,
+   "fim": 4.72
   },
   {
    "fala": "N2",
    "texto": "Os avisos chegam no WhatsApp do cliente.",
-   "ini": 5.2,
-   "fim": 7.68
+   "ini": 4.96,
+   "fim": 7.44
   },
   {
    "fala": "N2",
    "texto": "E, se quiser, também por SMS ou e-mail.",
-   "ini": 7.84,
-   "fim": 11.4
+   "ini": 7.6,
+   "fim": 11.08
   },
   {
    "fala": "N3",
    "texto": "E liga os mimos automáticos: carimbo de boas-vindas, de aniversário, e dias com carimbo em dobro.",
-   "ini": 11.6,
-   "fim": 18.6
+   "ini": 11.28,
+   "fim": 18.12
   },
   {
    "fala": "N4",
    "texto": "Daí em diante, os avisos saem sozinhos, no WhatsApp do cliente.",
-   "ini": 18.8,
-   "fim": 23.0
+   "ini": 18.32,
+   "fim": 22.32
   },
   {
    "fala": "N5",
    "texto": "Sem você precisar lembrar de nada.",
-   "ini": 23.2,
-   "fim": 25.48
+   "ini": 22.72,
+   "fim": 25.0
   },
   {
    "fala": "N6",
    "texto": "Comece agora.",
-   "ini": 25.68,
-   "fim": 26.72
+   "ini": 25.2,
+   "fim": 26.08
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 26.88,
-   "fim": 27.92
+   "ini": 26.4,
+   "fim": 27.44
   }
  ]
 }
