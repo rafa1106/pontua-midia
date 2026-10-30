@@ -10,31 +10,31 @@
    "id": "N2",
    "texto": "O painel mostra quantos clientes não aparecem há mais de trinta dias.",
    "ini": 5.2,
-   "fim": 9.88
+   "fim": 9.96
   },
   {
    "id": "N3",
    "texto": "Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.",
-   "ini": 10.08,
-   "fim": 16.8
+   "ini": 10.16,
+   "fim": 16.48
   },
   {
    "id": "N4",
    "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
-   "ini": 16.92,
-   "fim": 21.44
+   "ini": 16.88,
+   "fim": 21.04
   },
   {
    "id": "N5",
    "texto": "E o convite chega direto no WhatsApp do cliente.",
-   "ini": 21.467,
-   "fim": 24.64
+   "ini": 21.36,
+   "fim": 24.08
   },
   {
    "id": "N6",
    "texto": "Comece agora. Link na bio.",
-   "ini": 24.8,
-   "fim": 26.88
+   "ini": 24.4,
+   "fim": 26.72
   }
  ],
  "frases": [
@@ -46,7 +46,7 @@
   },
   {
    "fala": "N1",
-   "texto": "O pontua percebe, e já monta o convite pra ele voltar.",
+   "texto": "O pontúa percebe, e já monta o convite pra ele voltar.",
    "ini": 1.44,
    "fim": 4.8
   },
@@ -54,37 +54,37 @@
    "fala": "N2",
    "texto": "O painel mostra quantos clientes não aparecem há mais de trinta dias.",
    "ini": 5.2,
-   "fim": 9.88
+   "fim": 9.96
   },
   {
    "fala": "N3",
    "texto": "Com um clique, vem tudo pronto: um carimbo de presente pra quem voltar, quem recebe, e o texto.",
-   "ini": 10.08,
-   "fim": 16.8
+   "ini": 10.16,
+   "fim": 16.48
   },
   {
    "fala": "N4",
    "texto": "Você ajusta o que quiser, confere o resumo e o custo, e envia.",
-   "ini": 16.92,
-   "fim": 21.44
+   "ini": 16.88,
+   "fim": 21.04
   },
   {
    "fala": "N5",
    "texto": "E o convite chega direto no WhatsApp do cliente.",
-   "ini": 21.467,
-   "fim": 24.64
+   "ini": 21.36,
+   "fim": 24.08
   },
   {
    "fala": "N6",
    "texto": "Comece agora.",
-   "ini": 24.8,
-   "fim": 25.92
+   "ini": 24.4,
+   "fim": 25.52
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 26.04,
-   "fim": 26.88
+   "ini": 25.68,
+   "fim": 26.72
   }
  ]
 }
