@@ -4,37 +4,37 @@
    "id": "N1",
    "texto": "Quem são os seus clientes de verdade? E quem sumiu?",
    "ini": 0.0,
-   "fim": 3.92
+   "fim": 4.04
   },
   {
    "id": "N2",
    "texto": "No pontua, a sua lista de clientes fica num lugar só.",
-   "ini": 4.16,
-   "fim": 7.6
+   "ini": 4.32,
+   "fim": 7.88
   },
   {
    "id": "N3",
    "texto": "O painel avisa quem não aparece há mais de trinta dias, e já dá pra chamar de volta.",
-   "ini": 8.0,
-   "fim": 13.32
+   "ini": 8.08,
+   "fim": 13.52
   },
   {
    "id": "N4",
    "texto": "Na ficha de cada cliente, você vê campanhas, prêmios e o histórico de visitas.",
-   "ini": 13.52,
-   "fim": 18.92
+   "ini": 13.6,
+   "fim": 19.12
   },
   {
    "id": "N5",
    "texto": "É uma base que é sua. Não da rede social.",
-   "ini": 19.12,
-   "fim": 22.16
+   "ini": 19.2,
+   "fim": 22.56
   },
   {
    "id": "N6",
    "texto": "Crie o seu grátis. Link na bio.",
-   "ini": 22.56,
-   "fim": 25.12
+   "ini": 22.6,
+   "fim": 25.36
   }
  ],
  "frases": [
@@ -42,55 +42,55 @@
    "fala": "N1",
    "texto": "Quem são os seus clientes de verdade?",
    "ini": 0.0,
-   "fim": 2.28
+   "fim": 2.36
   },
   {
    "fala": "N1",
    "texto": "E quem sumiu?",
-   "ini": 2.48,
-   "fim": 3.92
+   "ini": 2.56,
+   "fim": 4.04
   },
   {
    "fala": "N2",
-   "texto": "No pontua, a sua lista de clientes fica num lugar só.",
-   "ini": 4.16,
-   "fim": 7.6
+   "texto": "No pontúa, a sua lista de clientes fica num lugar só.",
+   "ini": 4.32,
+   "fim": 7.88
   },
   {
    "fala": "N3",
    "texto": "O painel avisa quem não aparece há mais de trinta dias, e já dá pra chamar de volta.",
-   "ini": 8.0,
-   "fim": 13.32
+   "ini": 8.08,
+   "fim": 13.52
   },
   {
    "fala": "N4",
    "texto": "Na ficha de cada cliente, você vê campanhas, prêmios e o histórico de visitas.",
-   "ini": 13.52,
-   "fim": 18.92
+   "ini": 13.6,
+   "fim": 19.12
   },
   {
    "fala": "N5",
    "texto": "É uma base que é sua.",
-   "ini": 19.12,
-   "fim": 20.64
+   "ini": 19.2,
+   "fim": 20.96
   },
   {
    "fala": "N5",
    "texto": "Não da rede social.",
-   "ini": 20.96,
-   "fim": 22.16
+   "ini": 21.08,
+   "fim": 22.56
   },
   {
    "fala": "N6",
    "texto": "Crie o seu grátis.",
-   "ini": 22.56,
-   "fim": 23.92
+   "ini": 22.6,
+   "fim": 24.32
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 24.16,
-   "fim": 25.12
+   "ini": 24.44,
+   "fim": 25.36
   }
  ]
 }
