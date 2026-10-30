@@ -4,37 +4,37 @@
    "id": "N1",
    "texto": "Semana parada? O pontua já deixa as ações prontas pra você.",
    "ini": 0.0,
-   "fim": 4.24
+   "fim": 4.36
   },
   {
    "id": "N2",
    "texto": "Aviso de carimbo em dobro, pra quem anda sumido.",
-   "ini": 4.64,
-   "fim": 7.72
+   "ini": 4.56,
+   "fim": 7.56
   },
   {
    "id": "N3",
    "texto": "Mimo de aniversário: um carimbo de presente pros aniversariantes do mês.",
-   "ini": 7.92,
-   "fim": 12.32
+   "ini": 7.76,
+   "fim": 12.24
   },
   {
    "id": "N4",
    "texto": "E carimbo surpresa pra quem está perto do prêmio.",
-   "ini": 12.48,
-   "fim": 15.44
+   "ini": 12.4,
+   "fim": 15.8
   },
   {
    "id": "N5",
    "texto": "Você escolhe, confere o resumo, e a mensagem chega no WhatsApp do cliente.",
-   "ini": 15.6,
-   "fim": 20.24
+   "ini": 16.0,
+   "fim": 20.64
   },
   {
    "id": "N6",
    "texto": "Comece agora. Link na bio.",
-   "ini": 20.48,
-   "fim": 22.72
+   "ini": 20.8,
+   "fim": 23.04
   }
  ],
  "frases": [
@@ -42,49 +42,49 @@
    "fala": "N1",
    "texto": "Semana parada?",
    "ini": 0.0,
-   "fim": 1.28
+   "fim": 1.32
   },
   {
    "fala": "N1",
-   "texto": "O pontua já deixa as ações prontas pra você.",
-   "ini": 1.44,
-   "fim": 4.24
+   "texto": "O pontúa já deixa as ações prontas pra você.",
+   "ini": 1.52,
+   "fim": 4.36
   },
   {
    "fala": "N2",
    "texto": "Aviso de carimbo em dobro, pra quem anda sumido.",
-   "ini": 4.64,
-   "fim": 7.72
+   "ini": 4.56,
+   "fim": 7.56
   },
   {
    "fala": "N3",
    "texto": "Mimo de aniversário: um carimbo de presente pros aniversariantes do mês.",
-   "ini": 7.92,
-   "fim": 12.32
+   "ini": 7.76,
+   "fim": 12.24
   },
   {
    "fala": "N4",
    "texto": "E carimbo surpresa pra quem está perto do prêmio.",
-   "ini": 12.48,
-   "fim": 15.44
+   "ini": 12.4,
+   "fim": 15.8
   },
   {
    "fala": "N5",
    "texto": "Você escolhe, confere o resumo, e a mensagem chega no WhatsApp do cliente.",
-   "ini": 15.6,
-   "fim": 20.24
+   "ini": 16.0,
+   "fim": 20.64
   },
   {
    "fala": "N6",
    "texto": "Comece agora.",
-   "ini": 20.48,
-   "fim": 21.56
+   "ini": 20.8,
+   "fim": 21.84
   },
   {
    "fala": "N6",
    "texto": "Link na bio.",
-   "ini": 21.76,
-   "fim": 22.72
+   "ini": 22.0,
+   "fim": 23.04
   }
  ]
 }
