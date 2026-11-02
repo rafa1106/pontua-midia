@@ -59,8 +59,10 @@
     },
     "unhas": {
       "arquivo": "fontes/ramos/unhas.jpg",
-      "status": "disponivel",
-      "usada_em": [],
+      "status": "usada",
+      "usada_em": [
+        "p1117_unhas"
+      ],
       "obs": "Cartão com 4 de 5 e notificação 'faltam 2' — não citar números na legenda."
     }
   },
