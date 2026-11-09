@@ -31,8 +31,10 @@
     },
     "posto": {
       "arquivo": "fontes/ramos/posto.jpg",
-      "status": "disponivel",
-      "usada_em": [],
+      "status": "usada",
+      "usada_em": [
+        "p1124_posto"
+      ],
       "obs": "Ramo secundário. Cartão mostra 1 de 5 carimbos mas a notificação diz 'faltam 2' — ok como ilustração, não citar números na legenda."
     },
     "hamburgueria": {
