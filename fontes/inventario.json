@@ -47,8 +47,10 @@
     },
     "academia": {
       "arquivo": "fontes/ramos/academia.jpg",
-      "status": "disponivel",
-      "usada_em": [],
+      "status": "usada",
+      "usada_em": [
+        "p1201_academia"
+      ],
       "obs": "Ramo secundário (loja de suplementos/academia). Contagem do cartão não bate com 'faltam 2' — não citar números na legenda."
     },
     "acai": {
